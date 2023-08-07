@@ -1,0 +1,51 @@
+
+<!-- Toolbar -->
+ <div class="toolbar" role="banner">
+  <img
+    width="100"
+    alt="Logo"
+    src="https://aecconsultoras.com/wp-content/uploads/2020/01/logo-asociados-oesia-768x395.jpg"
+  />
+  <span>Supermercado </span>
+
+ <div>
+  <span>
+      <form>
+        <span class="p-input-icon-left">
+          <i class="pi pi-search" style="font-size: 1rem"></i> 
+          <!-- <input type="text" InputText [(ngModel)]="value"/> -->
+          <input type="text" pInputText placeholder="Buscar productos" class="search-input" />
+
+            <!-- <p-inputText [(ngModel)]="searchValue" (keyup.enter)="openPicklistDialog()" placeholder="Buscar productos" class="search-input"></p-inputText>
+             <p-button (click)="openPicklistDialog()" icon="pi pi-search" label="Buscar"></p-button> -->
+      </span>
+      </form>
+  </span>
+</div>
+
+<app-dialog-busqueda></app-dialog-busqueda>
+
+   <!-- <app-pick-list></app-pick-list> -->
+
+ <div class="spacer"></div>
+  <!-- <i class="pi pi-shopping-cart" pBadge value="2" style="font-size: 2.5rem"></i> -->
+  <app-dialog></app-dialog>
+ <i class="pi pi-user" style="font-size: 2.5rem; margin-left: 20px;"></i>
+</div>
+
+
+
+
+
+<div class="content" role="main">
+</div>
+
+  <app-carousel></app-carousel>
+
+
+
+
+
+
+ <router-outlet></router-outlet>
+
