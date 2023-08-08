@@ -3,7 +3,7 @@
       [targetStyle]="{ height: '30rem' }" filterBy="name" sourceFilterPlaceholder="Search by name" targetFilterPlaceholder="Search by name" breakpoint="1400px">
       <ng-template let-product pTemplate="item">
           <div class="flex flex-wrap p-2 align-items-center gap-3">
-              <img class="w-4rem shadow-2 flex-shrink-0 border-round" [src]="'../assets/imagenes/productos/'+product.imagen" [alt]="product.nombre" />
+              <img class="w-4rem flex-shrink-0 border-round" [src]="'../assets/imagenes/productos/'+product.imagen" [alt]="product.nombre" />
               <div class="flex-1 flex flex-column gap-2">
                   <span class="font-bold">{{ product.nombre }}</span>
                   <div class="flex align-products-center gap-2">
@@ -24,7 +24,7 @@
     [targetStyle]="{ height: '30rem' }" filterBy="nombre" sourceFilterPlaceholder="Search by name" targetFilterPlaceholder="Search by name" breakpoint="1400px">
     <ng-template let-product pTemplate="item">
         <div class="flex flex-wrap p-2 align-items-center gap-3">
-            <img class="w-4rem shadow-2 flex-shrink-0 border-round" [src]="'../assets/imagenes/productos/'+product.imagen" [alt]="product.nombre" />
+            <img class="w-4rem flex-shrink-0 border-round" [src]="'../assets/imagenes/productos/'+product.imagen" [alt]="product.nombre" />
             <div class="flex-1 flex flex-column gap-2">
                 <span class="font-bold">{{ product.nombre }}</span>
                 <div class="flex align-products-center gap-2">

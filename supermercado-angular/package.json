@@ -23,12 +23,16 @@
     "primeng": "^16.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "bcryptjs": "^2.4.3",
+    "crypto-browserify": "^3.12.0",
+    "stream-browserify": "^3.0.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.1.4",
     "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^16.1.0",
+    "@types/bcryptjs": "^2.4.2",
     "@types/jasmine": "~4.3.0",
     "git": "^0.1.5",
     "jasmine-core": "~4.6.0",

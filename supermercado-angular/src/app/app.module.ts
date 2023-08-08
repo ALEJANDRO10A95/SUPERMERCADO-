@@ -6,10 +6,10 @@ import { AppComponent } from './app.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MessageModule } from 'primeng/message';
 import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
-
 // import { CascadeComponent } from './cascade/cascade.component';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { CarritocompraComponent } from './carritocompra/carritocompra.component';
@@ -19,14 +19,12 @@ import { ProductlistdemoComponent } from './productlistdemo/productlistdemo.comp
 import { TableModule } from 'primeng/table';
 // import { PickListComponent } from './PicklistFilterDemo/pick-list.component';
 import { PickListModule } from 'primeng/picklist';
- 
-
-
 import { DialogModule } from 'primeng/dialog';
 import { DialogDinamycBusquedadComponent } from './dialog-dinamyc-busquedad/dialog-dinamyc-busquedad.component';
 // import { ProductbusquedaComponent } from './productbusqueda/productbusqueda.component';
 import { PicklistFilterDemoComponent } from './picklist-filter-demo/picklist-filter-demo.component';
 import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.component';
+import { DialogClienteComponent } from './dialog-cliente/dialog-cliente.component';
 
 
 
@@ -44,10 +42,7 @@ import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.compo
     PicklistFilterDemoComponent,
     // DynamicDialogModule,
     DialogBusquedaComponent,
-
-
-
-
+    DialogClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -57,13 +52,14 @@ import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.compo
     InputTextModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
+    MessageModule,
     CarouselModule,
     CascadeSelectModule,
     DynamicDialogModule,
     TableModule,
     PickListModule,
     DialogModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,223 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Leche semidesnatada",
+        "descripcion": "Brick 1L",
+        "categoria": "LACTEOS",
+        "cantidad": 100,
+        "precio": 0.90,
+        "imagen": "leche_semidesnatada.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Leche entera",
+        "descripcion": "Brick 1L",
+        "categoria": "LACTEOS",
+        "cantidad": 100,
+        "precio": 0.91,
+        "imagen": "leche_entera.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Brócoli",
+        "descripcion": "Pieza 393 g aprox.",
+        "categoria": "FRUTA_VERDURA",
+        "cantidad": 100,
+        "precio": 0.96,
+        "imagen": "brocoli.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Berenjena",
+        "descripcion": "Pieza 366 g aprox.",
+        "categoria": "FRUTA_VERDURA",
+        "cantidad": 100,
+        "precio": 0.69,
+        "imagen": "berenjena.jpg"
+      },
+      {
+        "id": 5,
+        "nombre": "Detergente ropa",
+        "descripcion": "jabón natural de Marsella Bosque Verde líquido",
+        "categoria": "LIMPIEZA_HOGAR",
+        "cantidad": 100,
+        "precio": 3.50,
+        "imagen": "detergente_ropa.jpg"
+      },
+      {
+        "id": 6,
+        "nombre": "Lejía",
+        "descripcion": "Lejía normal Tradicional Bosque Verde",
+        "categoria": "LIMPIEZA_HOGAR",
+        "cantidad": 100,
+        "precio": 1.60,
+        "imagen": "lejia.jpg"
+      },
+      {
+        "id": 7,
+        "nombre": "Pollo entero",
+        "descripcion": "Bandeja 1,9 kg aprox.",
+        "categoria": "CARNE_HUEVOS",
+        "cantidad": 100,
+        "precio": 6.17,
+        "imagen": "pollo_entero.jpg"
+      },
+      {
+        "id": 8,
+        "nombre": "Muslos de pollo",
+        "descripcion": "Bandeja 920 g aprox.",
+        "categoria": "CARNE_HUEVOS",
+        "cantidad": 100,
+        "precio": 3.85,
+        "imagen": "muslos_pollo.jpg"
+      },
+      {
+        "id": 9,
+        "nombre": "Agua mineral grande",
+        "descripcion": "Garrafa 5 L",
+        "categoria": "AGUA_BEBIDAS",
+        "cantidad": 100,
+        "precio": 1.06,
+        "imagen": "agua_5l.jpg"
+      },
+      {
+        "id": 10,
+        "nombre": "Agua mineral grande",
+        "descripcion": "Botella 1,5 L",
+        "categoria": "AGUA_BEBIDAS",
+        "cantidad": 100,
+        "precio": 0.37,
+        "imagen": "agua_1,5l.jpg"
+      },
+      {
+        "id": 11,
+        "nombre": "Bebida isotónica limón Aquarius",
+        "descripcion": "Lata 330 ml",
+        "categoria": "AGUA_BEBIDAS",
+        "cantidad": 100,
+        "precio": 0.85,
+        "imagen": "aquarius_limon.jpg"
+      },
+      {
+        "id": 12,
+        "nombre": "Refresco Fanta naranja",
+        "descripcion": "Lata 330 ml",
+        "categoria": "AGUA_BEBIDAS",
+        "cantidad": 100,
+        "precio": 0.70,
+        "imagen": "fanta_naranja.jpg"
+      },
+      {
+        "id": 13,
+        "nombre": "Yogur griego natural",
+        "descripcion": "pack 6 ud.",
+        "categoria": "DULCES_POSTRES",
+        "cantidad": 100,
+        "precio": 1.45,
+        "imagen": "yogurt_natural.jpg"
+      },
+      {
+        "id": 14,
+        "nombre": "Flan de huevo",
+        "descripcion": "4 ud.",
+        "categoria": "DULCES_POSTRES",
+        "cantidad": 100,
+        "precio": 2.00,
+        "imagen": "flan_huevo.jpg"
+      },
+      {
+        "id": 15,
+        "nombre": "Gambón congelado",
+        "descripcion": "Granel 150 g aprox.",
+        "categoria": "PESCADO_MARISCO",
+        "cantidad": 100,
+        "precio": 1.64,
+        "imagen": "gambon_congelado.jpg"
+      },
+      {
+        "id": 16,
+        "nombre": "Filetes de merluza sin piel",
+        "descripcion": "Paquete 970 g escurrido",
+        "categoria": "PESCADO_MARISCO",
+        "cantidad": 100,
+        "precio": 6.35,
+        "imagen": "filetes_merluza.jpg"
+      }
+    ],
+    "clientes": [
+      {
+        "id": 1,
+        "nombre": "Jesús",
+        "apellidos": "Rodriguez",
+        "email": "elnumero1@hotmail.com",
+        "password": "$2a$10$/j6qADSuRMvSAa1dw.OY6uGni69GtFopO/Lto/dsqH/vkmY/QACCq"
+      },
+      {
+        "id": 2,
+        "nombre": "Clemente",
+        "apellidos": "García",
+        "email": "elnumero2@hotmail.com",
+        "password": "$2a$10$/j6qADSuRMvSAa1dw.OY6uGni69GtFopO/Lto/dsqH/vkmY/QACCq"
+      },
+      {
+        "id": 3,
+        "nombre": "Manuel",
+        "apellidos": "Párraga",
+        "email": "elnumero3@hotmail.com",
+        "password": "$2a$10$/j6qADSuRMvSAa1dw.OY6uGni69GtFopO/Lto/dsqH/vkmY/QACCq"
+      },
+      {
+        "id": 4,
+        "nombre": "María",
+        "apellidos": "Pérez",
+        "email": "elnumero4@hotmail.com",
+        "password": "$2a$10$/j6qADSuRMvSAa1dw.OY6uGni69GtFopO/Lto/dsqH/vkmY/QACCq"
+      },
+      {
+        "id": 5,
+        "nombre": "Teresa",
+        "apellidos": "Riquelme",
+        "email": "elnumero5@hotmail.com",
+        "password": "$2a$10$/j6qADSuRMvSAa1dw.OY6uGni69GtFopO/Lto/dsqH/vkmY/QACCq"
+      }
+    ],
+    "compras": [
+      {
+        "id": 1,
+        "cliente_id": 1,
+        "fecha": "2022-11-11"
+      },
+      {
+        "id": 2,
+        "cliente_id": 1,
+        "fecha": "2022-12-20"
+      },
+      {
+        "id": 3,
+        "cliente_id": 2,
+        "fecha": "2023-01-11"
+      },
+      {
+        "id": 4,
+        "cliente_id": 3,
+        "fecha": "2023-03-04"
+      },
+      {
+        "id": 5,
+        "cliente_id": 3,
+        "fecha": "2023-04-18"
+      },
+      {
+        "id": 6,
+        "cliente_id": 1,
+        "fecha": "2023-05-02"
+      },
+      {
+        "id": 7,
+        "cliente_id": 4,
+        "fecha": "2023-06-29"
+      }
+    ]
+  }
+  
