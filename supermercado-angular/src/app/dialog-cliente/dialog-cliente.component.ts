@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Cliente } from 'src/clases/cliente';
+import { Cliente } from 'src/interfaces/cliente';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -19,11 +19,7 @@ export class DialogClienteComponent {
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
-    /* this.loginService.clienteSubject$.subscribe(
-      (cliente: Cliente) => {
-        this.clienteIngresado = cliente;
-      }
-    ) */
+
   }
 
   async loginCliente() {

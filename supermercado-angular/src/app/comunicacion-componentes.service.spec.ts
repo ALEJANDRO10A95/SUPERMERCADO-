@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ComunicacionComponentesService } from './comunicacion-componentes.service';
+import { ComunicacionComponentesService } from './services/comunicacion-componentes.service';
 
 describe('ComunicacionComponentesService', () => {
   let service: ComunicacionComponentesService;

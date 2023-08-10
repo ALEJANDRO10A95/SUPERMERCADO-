@@ -2,10 +2,7 @@
   <p-button (click)="showDialog()" icon="pi pi-search" label="Búsqueda"></p-button>
   <p-dialog header="BÚSQUEDA DE PRODUCTOS" [(visible)]="visible" [style]="{width: '50vw'}">
     <div class="dialog-header">
-      <!-- <span>Diálogo de Búsqueda</span> -->
-      <button class="dialog-close-button" (click)="closeDialog()">
-        <i class="pi pi-times"></i> <!-- Ícono de cierre -->
-      </button>
+    
     </div>
       <app-picklist-filter-demo></app-picklist-filter-demo>
 

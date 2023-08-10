@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Producto } from 'src/clases/producto';
-import { ProductService } from '../product.service';
+import { Producto } from 'src/interfaces/producto';
+import { ProductService } from '../services/product.service';
 
 
 @Component({
@@ -92,42 +92,6 @@ export class ProductlistdemoComponent {
     }
   }
 }
- /*  agregaProducto(producto: Producto): void {
-    let productoYaEnCarrito: Producto | undefined = this.products.find(p => p.id === producto.id) as Producto | undefined;
-
-    if(productoYaEnCarrito == undefined) {
-      this.products.push(producto);
-      return;
-  }
-  productoYaEnCarrito.cantidad =(productoYaEnCarrito.cantidad+1);
-}
-
-quitaProducto(producto: Producto): void {
-  let productoYaEnCarrito: Producto | undefined = this.products.find(p => p.id === producto.id);
-
-  if(productoYaEnCarrito == undefined) {
-      return;
-  }
-
-  productoYaEnCarrito.cantidad =(productoYaEnCarrito.cantidad-1);
-}
-
-
-
-
-
-  getSeverity(status: string) {
-      switch (status) {
-          case 'INSTOCK':
-              return 'success';
-          case 'LOWSTOCK':
-              return 'warning';
-          case 'OUTOFSTOCK':
-              return 'danger';
-              default:
-                return "";
-      }
-  } */
-
+ 
 
 

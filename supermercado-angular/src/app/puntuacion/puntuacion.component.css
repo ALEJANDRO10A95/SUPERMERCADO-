@@ -1,0 +1,16 @@
+.puntuacion {
+  text-align: center;
+  margin: 20px;
+}
+
+.estrellas {
+  font-size: 24px;
+}
+
+.fa-star.filled {
+  color: gold;
+}
+
+.fa-star.empty {
+  color: gray;
+}

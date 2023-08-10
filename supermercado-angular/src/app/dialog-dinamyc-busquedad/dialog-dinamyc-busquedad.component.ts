@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { Producto } from 'src/clases/producto';
+import { Producto } from 'src/interfaces/producto';
 import { ProductlistdemoComponent } from '../productlistdemo/productlistdemo.component';
 import { PicklistFilterDemoComponent } from '../picklist-filter-demo/picklist-filter-demo.component';
 
@@ -9,7 +9,7 @@ import { PicklistFilterDemoComponent } from '../picklist-filter-demo/picklist-fi
   selector: 'app-dialog-dinamyc-busquedad',
   templateUrl: './dialog-dinamyc-busquedad.component.html',
   styleUrls: ['./dialog-dinamyc-busquedad.component.css'],
-  
+
 })
 export class DialogDinamycBusquedadComponent {
   constructor(public dialogService: DialogService, public messageService: MessageService) {}

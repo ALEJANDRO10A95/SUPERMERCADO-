@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
-import { Producto } from 'src/clases/producto';
+import { Producto } from 'src/interfaces/producto';
 import { ProductlistdemoComponent } from '../productlistdemo/productlistdemo.component';
 
 @Component({

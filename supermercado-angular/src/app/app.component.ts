@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Cliente } from 'src/clases/cliente';
+import { Cliente } from 'src/interfaces/cliente';
 
 @Component({
   selector: 'app-root',

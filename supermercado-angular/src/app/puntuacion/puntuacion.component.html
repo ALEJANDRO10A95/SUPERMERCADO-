@@ -1,0 +1,27 @@
+<div class="puntuacion">
+  <h3>{{ producto.nombre }}</h3>
+  <div class="estrellas">
+    <span *ngFor="let _ of [].constructor(puntuacion); let i = index">
+      <i class="fa fa-star" aria-hidden="true"></i>
+    </span>
+    <span *ngFor="let _ of [].constructor(5 - puntuacion); let i = index">
+      <i class="fa fa-star-o" aria-hidden="true"></i>
+    </span>
+  </div>
+  <button (click)="aumentarPuntuacion()">Aumentar</button>
+  <button (click)="disminuirPuntuacion()">Disminuir</button>
+</div>
+
+
+<!-- <div class="puntuacion">
+  <h3>{{ producto.nombre }}</h3>
+  <div class="estrellas">
+    <i
+      class="fa fa-star"
+      [class.filled]="puntuacion >= i + 1"
+      [class.empty]="puntuacion < i + 1"
+      *ngFor="let _ of [].constructor(maxPuntuacion); let i = index"
+      (click)="asignarPuntuacion(i + 1)"
+    ></i>
+  </div>
+</div> -->

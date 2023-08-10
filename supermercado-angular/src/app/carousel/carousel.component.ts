@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Categorias } from 'src/clases/categorias';
-import { Producto } from 'src/clases/producto';
+import { Categorias } from 'src/interfaces/categorias';
+import { Producto } from 'src/interfaces/producto';
 
 @Component({
   selector: 'app-carousel',
@@ -27,11 +27,11 @@ products: Producto[] |any= [
   new Producto(4, "Leche entera", "Brick 1L", Categorias.LACTEOS, 100, 0.91, "leche_entera.jpg"),
   new Producto(5,  "Brócoli", "Pieza 393 g aprox.", Categorias.FRUTA_VERDURA, 100, 0.96, "brocoli.jpg"),
   new Producto(6, "Jabón", "Jabón quita-manchas", Categorias.LIMPIEZA_HOGAR, 2, 1.9, "detergente_ropa.jpg"),
-  new Producto(7, "Pollo entero", "Bandeja 1,9 kg aprox.", Categorias.CHARCUTERÍA, 10, 6.17, "pollo_entero.jpg"),
-  new Producto(8, "Muslos de pollo", "Bandeja 920 g aprox.", Categorias.CHARCUTERÍA, 11, 3.85, "muslos_pollo.jpg"),
+  new Producto(7, "Pollo entero", "Bandeja 1,9 kg aprox.", Categorias.CHARCUTERIA, 10, 6.17, "pollo_entero.jpg"),
+  new Producto(8, "Muslos de pollo", "Bandeja 920 g aprox.", Categorias.CHARCUTERIA, 11, 3.85, "muslos_pollo.jpg"),
   new Producto(9, "Agua mineral grande", "Garrafa 5 L", Categorias.AGUA_BEBIDAS, 100, 1.06, "agua_5l.jpg"),
   new Producto(10, "Bebida isotónica limón Aquarius", "Lata 330 ml", Categorias.AGUA_BEBIDAS, 120, 0.85, "aquarius_limon.jpg"),
-  new Producto(11, "Pollo entero", "Bandeja 1,9 kg aprox.", Categorias.CHARCUTERÍA, 10, 6.17, "pollo_entero.jpg"),
+  new Producto(11, "Pollo entero", "Bandeja 1,9 kg aprox.", Categorias.CHARCUTERIA, 10, 6.17, "pollo_entero.jpg"),
   new Producto(12,  'Berenjena', 'Pieza 366 g aprox.',Categorias.FRUTA_VERDURA, 100, 0.69, 'berenjena.jpg'),
   new Producto(13, 'Lejía', 'Lejía normal Tradicional Bosque Verde', Categorias.LIMPIEZA_HOGAR, 100, 1.60, 'lejia.jpg'),
   new Producto(14, 'Refresco Fanta naranja', 'Lata 330 ml', Categorias.AGUA_BEBIDAS, 100, 0.70, 'fanta_naranja.jpg'),

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Cliente } from 'src/clases/cliente';
+import { Cliente } from 'src/interfaces/cliente';
 import { ClienteService } from './cliente.service';
 import * as bcrypt from 'bcryptjs';
 
@@ -20,7 +20,7 @@ export class LoginService {
     //TODO
     let passwordCifrada = bcrypt.hashSync(passwordInput, 10);
     console.log("password cifrada:" + passwordCifrada);
-    
+
     const resonseOptions = { status: 200 };
     return new Response(null, resonseOptions);
   }
