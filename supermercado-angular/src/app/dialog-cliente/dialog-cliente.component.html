@@ -23,9 +23,9 @@
             </div>
             <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.dirty || loginForm.touched)">
                 <p-message severity="error" *ngIf="loginForm.controls['password']?.errors?.['required']"
-                    text="password es requerido."></p-message>
+                    text="constraseña es requerida."></p-message>
                 <p-message severity="error" *ngIf="loginForm.controls['password']?.errors?.['minLength']"
-                    text="password debe tener un mínimo de 4 caracteres."></p-message>
+                    text="contraseña debe tener un mínimo de 4 caracteres."></p-message>
             </div>
         </div>
 

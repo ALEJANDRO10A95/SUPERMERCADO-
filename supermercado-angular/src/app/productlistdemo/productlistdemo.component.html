@@ -1,29 +1,31 @@
 <div>
+    <div class="flex">
+        <p-button (click)="realizaCompra()">Realiza compra</p-button>
+        <h3>Precio total compra: </h3>
+        <h2>{{calculaPrecioTotal() | currency}}</h2>
+    </div>
     <p-table [value]="products" responsiveLayout="scroll" [paginator]="true" [rows]="5" [responsive]="true">
         <ng-template pTemplate="header">
             <tr>
-                <th pSortableColumn="nombre">Nombre </th>
+                <th pSortableColumn="nombre">Nombre</th>
                 <th pSortableColumn="imagen">Imagen</th>
-                <th pSortableColumn="producto">Categoria</th>
-                <th pSortableColumn="precio">Precio </th>
+                <th pSortableColumn="precio">Precio</th>
                 <th pSortableColumn="cantidad">Cantidad</th>
+                <th pSortableColumn="categoria">Categoria</th>
                 <th pSortableColumn="descripcion">Descripción</th>
-                <th style="width:6em"></th>
+                <th></th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-product>
             <tr>
                 <td>{{ product.nombre}}</td>
-                <td><img [src]="'../assets/imagenes/productos/'+ product.imagen" [alt]="product.name"
-                        class="w-4rem h-4rem" /></td>
-                <td>{{ product.precio}}</td>
-                <td>{{ product.categoria}}</td>
-                <td>{{ product.cantidad}}</td>
-                <td>{{ product.descripcion}}</td>
-
                 <td>
-                    <!-- <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag> -->
+                    <img [src]="'../assets/imagenes/productos/'+ product.imagen" [alt]="product.name" class="w-4rem h-4rem" />
                 </td>
+                <td>{{ product.precio | currency }}</td>
+                <td>{{ product.cantidad}}</td>
+                <td>{{ product.categoria}}</td>
+                <td>{{ product.descripcion}}</td>
                 <td>
                     <button type="button" pButton icon="pi pi-plus" (click)="agregaProducto(product)"></button>
                     <button type="button" pButton icon="pi pi-minus" (click)="quitaProducto(product)"></button>

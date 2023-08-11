@@ -5,17 +5,14 @@
               <div class="mb-3">
                   <img [src]="'../assets/imagenes/productos/'+product.imagen" [alt]="product.name" class="w-6" />
                   <h4 class="mb-1">{{ product.nombre }}</h4>
-                  <h6 class="mt-0 mb-3">{{ '€' + product.precio}}</h6>
-
-                  <!-- <div class="car-buttons mt-5"> -->
+                  <h6 class="mt-0 mb-3">{{product.precio | currency }}</h6>
+                  <!-- <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag> -->
+                  <div class="car-buttons mt-5">
                       <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
                       <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill" ></p-button>
                       <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-cart-plus" (onClick)=" load(product)"></p-button>
-
-                  <!-- </div> -->
-
+                  </div>
                 </div>
-
           </div>
       </ng-template>
   </p-carousel>

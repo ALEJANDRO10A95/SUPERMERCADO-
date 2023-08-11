@@ -18,7 +18,7 @@ export class DialogComponent {
 
   show() {
     this.ref = this.dialogService.open(ProductlistdemoComponent, {
-        header: 'LISTADO DE PRODUCTOS',
+        header: 'Carrito de Compra',
         width: '70%',
         contentStyle: { overflow: 'auto' },
         baseZIndex: 10000,

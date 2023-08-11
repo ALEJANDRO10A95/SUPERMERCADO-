@@ -10,23 +10,18 @@ import { ProductService } from '../services/product.service';
 })
 
 export class ProductlistdemoComponent {
-  products: Producto[] | any[] = [];
-  productoSeleccionado: Producto | null = null;
-  productosFiltrados: Producto[] = [];
-  sugerenciasProductos: Producto[] = [];
-  terminoBusqueda: string = '';
-  constructor(private productService: ProductService, /* public ref: DynamicDialogRef */) {}
+  products: Producto[] = [];
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
-     this.products = this.productService.getProducts();
+    this.products = this.productService.getProducts();
   }
-
-
 
   agregaProducto(producto: Producto): void {
     const productoYaEnCarrito: Producto | undefined = this.products.find(p => p.id === producto.id);
 
-    if (productoYaEnCarrito === undefined) {
+    if (productoYaEnCarrito == undefined) {
       this.products.push(producto);
     } else {
       productoYaEnCarrito.cantidad++;
@@ -34,50 +29,37 @@ export class ProductlistdemoComponent {
   }
 
   quitaProducto(producto: Producto): void {
-    this.products = this.products.map(p => {
-      if (p.id === producto.id) {
-        return { ...p, cantidad: Math.max(p.cantidad - 1, 0) };
-      }
-      return p;
-    }).filter(p => p.cantidad > 0);
-  }
+    let productoYaEnCarrito: Producto | undefined = this.products.find(p => p.id === producto.id);
 
-
-  buscarProductos(): void {
-    const filtro = this.terminoBusqueda.toLowerCase().trim();
-    const productosFiltrados = this.products.filter(
-      producto =>
-        producto.nombre.toLowerCase().includes(filtro) ||
-        producto.descripcion.toLowerCase().includes(filtro)
-    );
-
-    if (productosFiltrados.length === 1) {
-      this.mostrarProductoSeleccionado(productosFiltrados[0]);
-    } else {
-      this.ocultarProductoSeleccionado();
+    if (productoYaEnCarrito == undefined) {
+      return;
     }
 
-    this.mostrarSugerencias(productosFiltrados);
+    productoYaEnCarrito.cantidad = (productoYaEnCarrito.cantidad - 1);
+
+    if (productoYaEnCarrito.cantidad <= 0) {
+      this.eliminaProductoDeListado(producto);
+    }
   }
 
-  mostrarProductoSeleccionado(producto: Producto): void {
-    this.productoSeleccionado = producto;
+  private eliminaProductoDeListado(producto: Producto) {
+    let index: number = this.products.findIndex(item => item.id === producto.id);
+    if (index > -1) {
+      this.products.splice(index, 1);
+    }
   }
 
-  ocultarProductoSeleccionado(): void {
-    this.productoSeleccionado = null;
+  calculaPrecioTotal(): number {
+    let precioTotal: number = 0;
+    this.products.forEach( p => {
+      precioTotal += p.precio * p.cantidad;
+    });
+    return precioTotal;
   }
 
-  mostrarSugerencias(sugerencias: Producto[]): void {
-    this.sugerenciasProductos = sugerencias;
+  realizaCompra() {
+    
   }
-
-  seleccionarProducto(producto: Producto): void {
-    this.mostrarProductoSeleccionado(producto);
-    this.sugerenciasProductos = [];
-    this.terminoBusqueda = '';
-  }
-
 
   getSeverity(status: string) {
     switch (status) {
@@ -92,6 +74,3 @@ export class ProductlistdemoComponent {
     }
   }
 }
- 
-
-
