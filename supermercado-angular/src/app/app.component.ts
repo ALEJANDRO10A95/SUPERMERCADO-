@@ -9,7 +9,6 @@ import { Cliente } from 'src/interfaces/cliente';
 })
 
 export class AppComponent {
-  title = 'supermercado-angular';
-  searchValue: string = '';
+  title = 'Supermercado Angular';
 }
 

@@ -23,6 +23,7 @@ import { DialogDinamycBusquedadComponent } from './dialog-dinamyc-busquedad/dial
 import { PicklistFilterDemoComponent } from './picklist-filter-demo/picklist-filter-demo.component';
 import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.component';
 import { DialogClienteComponent } from './dialog-cliente/dialog-cliente.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 
@@ -36,7 +37,8 @@ import { DialogClienteComponent } from './dialog-cliente/dialog-cliente.componen
     DialogDinamycBusquedadComponent,
     PicklistFilterDemoComponent,
     DialogBusquedaComponent,
-    DialogClienteComponent
+    DialogClienteComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
