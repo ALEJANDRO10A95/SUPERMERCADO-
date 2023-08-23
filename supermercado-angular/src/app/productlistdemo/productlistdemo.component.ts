@@ -15,7 +15,10 @@ export class ProductlistdemoComponent {
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.products = this.productService.getProducts();
+    /* this.productService.getAllProductos()
+    .then(data => {
+      this.products = data;
+    }); */
   }
 
   agregaProducto(producto: Producto): void {

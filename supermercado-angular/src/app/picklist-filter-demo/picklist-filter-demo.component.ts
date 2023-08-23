@@ -10,10 +10,7 @@ import { PuntuacionComponent } from '../puntuacion/puntuacion.component';
   styleUrls: ['./picklist-filter-demo.component.css']
 })
 export class PicklistFilterDemoComponent {
-
-
   visible: boolean = false;
-
   sourceProducts!: Producto[];
   targetProducts: Producto[] = [];
   agregaProducto: any;
@@ -22,69 +19,45 @@ export class PicklistFilterDemoComponent {
   value: any;
   products: any;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.sourceProducts = this.productService.getProducts();
-    console.log(this.sourceProducts);
+    this.productService.getAllProductos()
+      .then(data => {
+        this.sourceProducts = data;
+      });
   }
-
-
 
   showDialog() {
     this.visible = true;
-}
-
-closeDialog() {
-  const farewellMessages = [
-    "Hasta luego, cerrando el diálogo.",
-    "Espero haberte ayudado, ¡adiós diálogo!",
-    "¡Nos vemos en la próxima! Cerrando el diálogo.",
-    "Diálogo cerrado, ¡que tengas un buen día!",
-    "Deseando que hayas encontrado lo que buscabas. Cierro el diálogo."
-  ];
-
-  const randomFarewell = farewellMessages[Math.floor(Math.random() * farewellMessages.length)];
-  console.log(randomFarewell);
-
-  this.visible = false;
-}
-
-onProductSelect(product: Producto) {
-  this.agregaProducto(product);
-  this.productSelected.emit(product);
-}
-
-// addProductFromPicklist(product: Producto) {
-//   this.agregaProducto(product);
-// }
-
-
-addProductFromPicklist(producto: Producto): void {
-  const productoYaEnCarrito: Producto | undefined = this.products.find((p: { id: number; }) => p.id === producto.id);
-
-  if (productoYaEnCarrito === undefined) {
-    this.products.push(producto);
-  } else {
-    productoYaEnCarrito.cantidad++;
   }
-}
 
+  closeDialog() {
+    this.visible = false;
+  }
 
+  onProductSelect(product: Producto) {
+    this.agregaProducto(product);
+    this.productSelected.emit(product);
+  }
 
-eliminarProducto(producto: Producto): void {
-  this.products = this.products.map((p: { id: number; cantidad: number; }) => {
-    if (p.id === producto.id) {
-      return { ...p, cantidad: Math.max(p.cantidad - 1, 0) };
+  addProductFromPicklist(producto: Producto): void {
+    const productoYaEnCarrito: Producto | undefined = this.products.find((p: { id: number; }) => p.id === producto.id);
+
+    if (productoYaEnCarrito === undefined) {
+      this.products.push(producto);
+    } else {
+      productoYaEnCarrito.cantidad++;
     }
-    return p;
-  }).filter((p: { cantidad: number; }) => p.cantidad > 0);
-}
+  }
 
-// quitarProducto(product: Producto) {
-//   this.quitarProducto(product);
-
-// }
-
+  eliminarProducto(producto: Producto): void {
+    this.products = this.products.map((p: { id: number; cantidad: number; }) => {
+      if (p.id === producto.id) {
+        return { ...p, cantidad: Math.max(p.cantidad - 1, 0) };
+      }
+      return p;
+    }).filter((p: { cantidad: number; }) => p.cantidad > 0);
+  }
 }
 

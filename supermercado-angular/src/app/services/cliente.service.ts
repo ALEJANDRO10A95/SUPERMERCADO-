@@ -14,29 +14,24 @@ export class ClienteService {
   }
 
   async getAllClientes(): Promise<Cliente[]> {
-    const data: Response = await fetch(this.url + "/clientes");
+    const data: Response = await fetch(this.url + "/cliente");
     return await data.json() ?? [];
   }
 
   async getClienteById(id: number): Promise<Cliente|undefined> {
-    const response: Response = await fetch(this.url + "/clientes/" + id);
-    let object: Cliente = await response.json();
-    if(object == undefined) {
-      return undefined;
-    }
-
-    return new Cliente(object.id,object.nombre,object.apellidos,object.email,object.contraseña,object.telefono);
+    const data: Response = await fetch(this.url + "/cliente/" + id);
+    return await data.json();
   }
 
   async getClienteByEmail(email: string): Promise<Cliente|undefined> {
-    const response: Response = await fetch(this.url + "/clientes?email=" + email);
-    let array = await response.json();
+    const response: Response = await fetch(this.url + "/cliente/email/" + email);
 
-    if(array.length == 0) {
-      return undefined;
+    let data;
+    try{
+      data = await response.json();
     }
-
-    let object = array[0];
-    return new Cliente(object.id,object.nombre,object.apellidos,object.email,object.password,object.telefono);
+    catch{
+    }
+    return data;
   }
 }

@@ -32,7 +32,7 @@ export class LoginService {
       return new Response(null, resonseOptions);
     }
 
-    let passwordCliente = clienteExistente.contraseña;
+    let passwordCliente = clienteExistente.pass;
     let esPasswordCorrecta: boolean = this.validaPasswordCliente(passwordInput, passwordCliente);
     if (!esPasswordCorrecta) {
       const resonseOptions = { status: 401 };

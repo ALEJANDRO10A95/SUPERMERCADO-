@@ -19,7 +19,11 @@ export class DialogClienteComponent {
   constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
-
+    this.loginService.clienteSubject$.subscribe(
+      (cliente) => {
+        this.clienteIngresado = cliente;
+      }
+    )
   }
 
   async loginCliente() {

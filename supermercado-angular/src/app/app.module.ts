@@ -11,7 +11,6 @@ import { MessageModule } from 'primeng/message';
 import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
-import { CarritocompraComponent } from './carritocompra/carritocompra.component';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { ProductlistdemoComponent } from './productlistdemo/productlistdemo.component';
@@ -24,6 +23,8 @@ import { PicklistFilterDemoComponent } from './picklist-filter-demo/picklist-fil
 import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.component';
 import { DialogClienteComponent } from './dialog-cliente/dialog-cliente.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { DataViewModule } from 'primeng/dataview';
+import { DataviewProductosComponent } from './dataview-productos/dataview-productos.component';
 
 
 
@@ -31,14 +32,14 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
   declarations: [
     AppComponent,
     CarouselComponent,
-    CarritocompraComponent,
     DialogComponent,
     ProductlistdemoComponent,
     DialogDinamycBusquedadComponent,
     PicklistFilterDemoComponent,
     DialogBusquedaComponent,
     DialogClienteComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    DataviewProductosComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +57,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     TableModule,
     PickListModule,
     DialogModule,
+    DataViewModule,
     BadgeModule
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
