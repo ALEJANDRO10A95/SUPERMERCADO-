@@ -1,14 +1,16 @@
 <div class="toolbar" role="banner">
-    <div class="div-logo">
-        <img width="100" alt="Logo"
-            src="https://aecconsultoras.com/wp-content/uploads/2020/01/logo-asociados-oesia-768x395.jpg" />
-        <span>Supermercado</span>
-    </div>
+    <a [routerLink]="['']" class="logo-link">
+        <div class="div-logo">
+            <img width="100" alt="Logo"
+                src="https://aecconsultoras.com/wp-content/uploads/2020/01/logo-asociados-oesia-768x395.jpg" />
+            <h3 class="titulo-logo">Supermercado</h3>
+        </div>
+    </a>
 
     <app-dialog-busqueda></app-dialog-busqueda>
     <p-button label="Catálogo productos" [routerLink]="['/productos']"></p-button>
     <div class="spacer"></div>
 
-    <app-dialog></app-dialog>
+    <app-dialog-carrito></app-dialog-carrito>
     <app-dialog-cliente></app-dialog-cliente>
 </div>

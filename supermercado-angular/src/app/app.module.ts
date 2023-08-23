@@ -12,19 +12,18 @@ import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
-import { DialogComponent } from './dialog/dialog.component';
-import { ProductlistdemoComponent } from './productlistdemo/productlistdemo.component';
 import { TableModule } from 'primeng/table';
 import { BadgeModule } from 'primeng/badge';
 import { PickListModule } from 'primeng/picklist';
 import { DialogModule } from 'primeng/dialog';
-import { DialogDinamycBusquedadComponent } from './dialog-dinamyc-busquedad/dialog-dinamyc-busquedad.component';
 import { PicklistFilterDemoComponent } from './picklist-filter-demo/picklist-filter-demo.component';
 import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.component';
 import { DialogClienteComponent } from './dialog-cliente/dialog-cliente.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { DataViewModule } from 'primeng/dataview';
 import { DataviewProductosComponent } from './dataview-productos/dataview-productos.component';
+import { DialogCarritoComponent } from './dialog-carrito/dialog-carrito.component';
+import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
 
 
 
@@ -32,14 +31,13 @@ import { DataviewProductosComponent } from './dataview-productos/dataview-produc
   declarations: [
     AppComponent,
     CarouselComponent,
-    DialogComponent,
-    ProductlistdemoComponent,
-    DialogDinamycBusquedadComponent,
     PicklistFilterDemoComponent,
     DialogBusquedaComponent,
     DialogClienteComponent,
     ToolbarComponent,
-    DataviewProductosComponent
+    DataviewProductosComponent,
+    DialogCarritoComponent,
+    CarritoCompraComponent
   ],
   imports: [
     BrowserModule,

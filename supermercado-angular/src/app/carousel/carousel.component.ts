@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Producto } from 'src/interfaces/producto';
 import { ProductService } from '../services/product.service';
+import { CarritoCompraService } from '../services/carrito-compra.service';
 
 @Component({
   selector: 'app-carousel',
@@ -28,7 +29,7 @@ export class CarouselComponent {
     }
   ];
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private carritoCompraService: CarritoCompraService) {
     this.productService.getAllProductos()
       .then(data => {
         this.productos = data;
@@ -36,7 +37,7 @@ export class CarouselComponent {
   }
 
   agregaAcarritoCompra(producto: Producto) {
-    //TODO
+    this.carritoCompraService.emiteProducto(producto);
   }
 
   getSeverity(status: string) {
