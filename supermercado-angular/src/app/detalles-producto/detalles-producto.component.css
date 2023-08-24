@@ -1,0 +1,38 @@
+.producto-detalle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.detalle-producto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.imagen-producto {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.imagen-producto img {
+    width: 400px; 
+    height: 300px; 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.detalles {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}

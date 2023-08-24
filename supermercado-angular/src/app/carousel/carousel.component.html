@@ -9,7 +9,7 @@
                   <h6 class="mt-0 mb-3">{{producto.precio | currency }}</h6>
                   <!-- <p-tag [value]="producto.inventoryStatus" [severity]="getSeverity(producto.inventoryStatus)"></p-tag> -->
                   <div class="car-buttons mt-5">
-                      <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                      <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search" [routerLink]="['/producto', producto.id]"></p-button>
                       <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill" ></p-button>
                       <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-cart-plus" (onClick)=" agregaAcarritoCompra(producto)"></p-button>
                   </div>

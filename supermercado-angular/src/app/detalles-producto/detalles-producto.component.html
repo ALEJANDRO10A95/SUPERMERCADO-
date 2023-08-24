@@ -1,0 +1,17 @@
+<div class="producto-detalle">
+    <p-button (click)="routingBack()">Volver atrás</p-button>
+
+    <h2>Características del Producto</h2>
+    <div class="detalle-producto">
+        <div class="imagen-producto">
+            <img *ngIf="product" [src]="'../assets/imagenes/productos/'+product.imagen" alt="Foto" />
+        </div>
+        <div class="detalles">
+            <h3>{{ product?.nombre }}</h3>
+            <p>Precio: {{ product?.precio | currency }}</p>
+            <p>Cantidad: {{ product?.cantidad }}</p>
+            <p>Categoría: {{ product?.categoria }}</p>
+            <p>Descripción: {{ product?.descripcion }}</p>
+        </div>
+    </div>
+</div>

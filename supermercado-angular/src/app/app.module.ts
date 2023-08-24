@@ -24,6 +24,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { DataviewProductosComponent } from './dataview-productos/dataview-productos.component';
 import { DialogCarritoComponent } from './dialog-carrito/dialog-carrito.component';
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
+import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component'
 
 
 
@@ -37,7 +38,8 @@ import { CarritoCompraComponent } from './carrito-compra/carrito-compra.componen
     ToolbarComponent,
     DataviewProductosComponent,
     DialogCarritoComponent,
-    CarritoCompraComponent
+    CarritoCompraComponent,
+    DetallesProductoComponent
   ],
   imports: [
     BrowserModule,
