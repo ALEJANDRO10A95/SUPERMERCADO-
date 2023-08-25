@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Cliente } from 'src/interfaces/cliente';
 import { LoginService } from '../services/login.service';
+import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-dialog-cliente',
@@ -11,6 +12,11 @@ import { LoginService } from '../services/login.service';
 export class DialogClienteComponent {
   clienteIngresado?: Cliente;
   esDialogVisible: boolean = false;
+
+  displayDialog: boolean = false;
+  displayCreateAccountDialog: boolean = false;
+ 
+  items: MenuItem[] | undefined;
   loginForm: FormGroup = new FormGroup({
     email: new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required, Validators.minLength(4)])
@@ -24,6 +30,30 @@ export class DialogClienteComponent {
         this.clienteIngresado = cliente;
       }
     )
+
+    this.items = [
+      {
+          
+          items: [
+              {
+                  label: 'Iniciar sesión',
+                  command: (event: any) => {
+                    this.showDialog();
+                }
+                  
+                 
+              },
+              {
+                  label: 'Crear cuenta',
+                  command: (event: any) => {
+                    this.showCreateAccountDialog();
+                }
+                  
+              }
+          ]
+      },
+      
+  ];
   }
 
   async loginCliente() {
@@ -44,7 +74,22 @@ export class DialogClienteComponent {
     this.loginService.logoutCliente();
   }
 
+  
   showDialog() {
-    this.esDialogVisible = true;
+    this.displayDialog = true;
   }
+
+  closeDialog() {
+    this.displayDialog = false;
+  }
+
+  showCreateAccountDialog() {
+    this.displayCreateAccountDialog = true;
+  }
+
+  closeCreateAccountDialog() {
+    this.displayCreateAccountDialog = false;
+  }
+
+  
 }

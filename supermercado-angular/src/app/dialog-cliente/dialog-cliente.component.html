@@ -1,5 +1,6 @@
-<p-button (click)="showDialog()" icon="pi pi-user" label="{{clienteIngresado?.nombre ?? 'Cliente'}}"></p-button>
-<p-dialog header="Ingresa o Registrate como Cliente" [(visible)]="esDialogVisible" [modal]="true" [resizable]="false"
+<p-menu #menu [model]="items" [popup]="true"></p-menu>
+<p-button (click)="menu.toggle($event)" icon="pi pi-user" label="{{clienteIngresado?.nombre ?? 'Cliente'}}"></p-button>
+<p-dialog header="Iniciar sesión" [(visible)]="displayDialog" [modal]="true" [resizable]="false"
     class="dialog">
 
     <form [formGroup]="loginForm" (submit)="loginCliente()" class="grid-container">
@@ -31,7 +32,71 @@
 
         <div class="grid3">
             <p-button type="submit" class="primary" [disabled]="loginForm.invalid">Ingresar Cliente</p-button>
-            <p-button label="Registrar nuevo Cliente" routerLink="" styleClass="p-button-link"></p-button>
+            <button pButton type="button" label="Cancelar" (click)="closeDialog()"></button>
+        </div>
+    </form>
+</p-dialog>
+
+
+<p-dialog header="Registrate como Cliente" [(visible)]="displayCreateAccountDialog" [modal]="true" [resizable]="false"
+    class="dialog">
+
+    <form [formGroup]="loginForm" (submit)="loginCliente()" class="grid-container">
+        
+        <div class="grid1">
+            <div class="label-input">
+                <label for="nombre">Nombre</label>
+                <input pInputText id="nombre" name="nombre" type="text" formControlName="nombre" required>
+            </div>
+            <div *ngIf="loginForm.controls['nombre']?.invalid && (loginForm.dirty || loginForm.touched)">
+                <p-message severity="error" *ngIf="loginForm.controls['nombre']?.errors?.['required']"
+                    text="nombre es requerido."></p-message>
+            </div>
+        </div>
+        
+       
+        <div class="grid2">
+            <div class="label-input">
+                <label for="apellido">Apellido</label>
+                <input pInputText id="apellido" name="apellido" type="text" formControlName="apellido" required>
+            </div>
+            <div *ngIf="loginForm.controls['apellido']?.invalid && (loginForm.dirty || loginForm.touched)">
+                <p-message severity="error" *ngIf="loginForm.controls['apellido']?.errors?.['required']"
+                    text="apellido es requerido."></p-message>
+            </div>
+        </div>
+
+        <div class="grid3">
+            <div class="label-input">
+                <label for="email">Email</label>
+                <input pInputText id="email" name="email" type="text" formControlName="email" required>
+            </div>
+            <div *ngIf="loginForm.controls['email']?.invalid && (loginForm.dirty || loginForm.touched)">
+                <p-message severity="error" *ngIf="loginForm.controls['email']?.errors?.['required']"
+                    text="email es requerido."></p-message>
+                <p-message severity="error" *ngIf="loginForm.controls['email']?.errors?.['email']"
+                    text="email introducido no es válido."></p-message>
+            </div>
+        </div>
+
+        
+
+        <div class="grid4">
+            <div class="label-input">
+                <label for="password">Contraseña</label>
+                <input pInputText id="password" name="password" type="password" formControlName="password" required>
+            </div>
+            <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.dirty || loginForm.touched)">
+                <p-message severity="error" *ngIf="loginForm.controls['password']?.errors?.['required']"
+                    text="constraseña es requerida."></p-message>
+                <p-message severity="error" *ngIf="loginForm.controls['password']?.errors?.['minLength']"
+                    text="contraseña debe tener un mínimo de 4 caracteres."></p-message>
+            </div>
+        </div>
+
+        <div class="grid5">
+            <p-button type="submit" class="primary" [disabled]="loginForm.invalid">Continuar</p-button>
+            <button pButton type="button" label="Cancelar" (click)="closeCreateAccountDialog()"></button>
         </div>
     </form>
 </p-dialog>
