@@ -1,0 +1,15 @@
+span {
+    position: relative;
+}
+
+.listbox-busqueda {
+    width: 15rem;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 0;
+}
+
+.img-producto {
+    width: 45px;
+}
