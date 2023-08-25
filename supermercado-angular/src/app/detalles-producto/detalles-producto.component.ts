@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Producto } from 'src/interfaces/producto';
 import { ProductService } from '../services/product.service';
 import { Location } from "@angular/common";
+import { CarritoCompraService } from '../services/carrito-compra.service';
 
 @Component({
   selector: 'app-detalles-producto',
@@ -12,7 +13,7 @@ import { Location } from "@angular/common";
 export class DetallesProductoComponent {
   product: Producto | undefined;
 
-  constructor(private route: ActivatedRoute, private location: Location, private productService: ProductService) {
+  constructor(private route: ActivatedRoute, private location: Location, private productService: ProductService, private carritoCompraService: CarritoCompraService) {
   }
 
   ngOnInit() {
@@ -26,6 +27,10 @@ export class DetallesProductoComponent {
     } catch (error) {
     }
   };
+
+  agregaAcarritoCompra(producto: Producto) {
+    this.carritoCompraService.emiteProducto(producto);
+  }
 
   routingBack() {
     this.location.back();

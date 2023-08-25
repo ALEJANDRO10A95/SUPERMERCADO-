@@ -4,7 +4,7 @@
       <ng-template let-producto pTemplate="item">
           <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
               <div class="mb-3">
-                  <img [src]="'../assets/imagenes/productos/'+producto.imagen" [alt]="producto.name" class="w-6" />
+                  <img [src]="'../assets/imagenes/productos/'+producto.imagen" [alt]="producto.nombre" class="w-6" />
                   <h4 class="mb-1">{{ producto.nombre }}</h4>
                   <h6 class="mt-0 mb-3">{{producto.precio | currency }}</h6>
                   <!-- <p-tag [value]="producto.inventoryStatus" [severity]="getSeverity(producto.inventoryStatus)"></p-tag> -->

@@ -16,4 +16,9 @@ export class ProductService {
     const data: Response = await fetch(this.url + "/producto/" + id);
     return await data.json();
   }
+
+  async getProductosByNombre(texto: string): Promise<Producto[]> {
+    const data: Response = await fetch(this.url + "/producto/nombre/" + texto);
+    return await data.json() ?? [];
+  }
 }

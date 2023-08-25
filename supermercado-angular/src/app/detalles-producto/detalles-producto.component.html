@@ -7,9 +7,9 @@
             <img *ngIf="product" [src]="'../assets/imagenes/productos/'+product.imagen" alt="Foto" />
         </div>
         <div class="detalles">
+            <p-button (onClick)="agregaAcarritoCompra(product!)" icon="pi pi-cart-plus" label="Agrega al Carrito"></p-button>
             <h3>{{ product?.nombre }}</h3>
             <p>Precio: {{ product?.precio | currency }}</p>
-            <p>Cantidad: {{ product?.cantidad }}</p>
             <p>Categoría: {{ product?.categoria }}</p>
             <p>Descripción: {{ product?.descripcion }}</p>
         </div>
