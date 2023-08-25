@@ -25,8 +25,8 @@ import { DataviewProductosComponent } from './dataview-productos/dataview-produc
 import { DialogCarritoComponent } from './dialog-carrito/dialog-carrito.component';
 import { CarritoCompraComponent } from './carrito-compra/carrito-compra.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component'
-
-
+import { MenuModule } from 'primeng/menu';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,9 @@ import { DetallesProductoComponent } from './detalles-producto/detalles-producto
     PickListModule,
     DialogModule,
     DataViewModule,
-    BadgeModule
+    BadgeModule,
+    MenuModule,
+    DropdownModule
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
   bootstrap: [AppComponent]
