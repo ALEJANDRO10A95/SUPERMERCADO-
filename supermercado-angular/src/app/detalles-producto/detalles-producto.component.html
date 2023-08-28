@@ -1,17 +1,18 @@
 <div class="producto-detalle">
     <p-button (click)="routingBack()">Volver atrás</p-button>
 
-    <h2>Características del Producto</h2>
-    <div class="detalle-producto">
+    <h2 class="text-color">Características del Producto</h2>
+    <div class="detalle-producto text-color">
         <div class="imagen-producto">
-            <img *ngIf="product" [src]="'../assets/imagenes/productos/'+product.imagen" alt="Foto" />
+            <img *ngIf="product" [src]="'../assets/imagenes/productos/'+product.imagen" alt="Foto" style="border-radius: 5px;"/>
         </div>
         <div class="detalles">
-            <p-button (onClick)="agregaAcarritoCompra(product!)" icon="pi pi-cart-plus" label="Agrega al Carrito"></p-button>
             <h3>{{ product?.nombre }}</h3>
             <p>Precio: {{ product?.precio | currency }}</p>
             <p>Categoría: {{ product?.categoria }}</p>
             <p>Descripción: {{ product?.descripcion }}</p>
+            <p-button (onClick)="agregaAcarritoCompra(product!)" icon="pi pi-cart-plus" label="Agrega al Carrito"></p-button>
+
         </div>
     </div>
 </div>
