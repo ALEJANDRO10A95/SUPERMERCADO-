@@ -3,8 +3,9 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
-body {
+body, html {
   font-family: var(--font-family);
+  background-color: var(--surface-ground);
 }
 
 :root {
@@ -43,7 +44,7 @@ body {
   --content-padding: 1rem;
   --inline-spacing: 0.5rem;
   --border-radius: 4px;
-  --surface-ground: #0e1315;
+  --surface-ground: linear-gradient(349deg, rgba(14,19,21,1) 0%, rgba(38,44,47,1) 35%, rgba(21,0,99,1) 100%);
   --surface-section: #0e1315;
   --surface-card: #161d21;
   --surface-overlay: #161d21;
@@ -96,6 +97,11 @@ body {
   url("assets/fonts/ERASDEMI.woff2") format("woff2"),
   url("assets/fonts/ERASDEMI.woff2") format("woff2");
 }
+
+.p-link{
+  border-radius: 10px !important;
+}
+
 * {
   box-sizing: border-box;
 }
