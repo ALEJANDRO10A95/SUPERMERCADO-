@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Producto } from 'src/interfaces/producto';
+import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-dialog-busqueda',
@@ -6,24 +9,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./dialog-busqueda.component.css']
 })
 export class DialogBusquedaComponent {
-  visible: boolean = false;
+  esVisible: boolean = false;
+  resultadoBusqueda: Producto[] = [];
+  productoSeleccionado?: Producto;
 
-    showDialog() {
-        this.visible = true;
+  constructor(private productService: ProductService, private router: Router) {
+  }
+
+  buscarProducto(input: string) {
+    //No se realizan busquedas con una sola letra
+    if(input.length < 2) {
+      this.resultadoBusqueda = [];
+      return;
     }
+    
+    this.productService.getProductosByNombre(input)
+      .then(data => this.resultadoBusqueda = data);
+  }
 
-    closeDialog() {
-      const farewellMessages = [
-        "Hasta luego, cerrando el diálogo.",
-        "Espero haberte ayudado, ¡adiós diálogo!",
-        "¡Nos vemos en la próxima! Cerrando el diálogo.",
-        "Diálogo cerrado, ¡que tengas un buen día!",
-        "Deseando que hayas encontrado lo que buscabas. Cierro el diálogo."
-      ];
+  redireccionaDetalleProducto(id: number) {
+    this.router.navigate(['/producto/'+id]);
+  }
 
-      const randomFarewell = farewellMessages[Math.floor(Math.random() * farewellMessages.length)];
-      console.log(randomFarewell);
+  showDialog() {
+    this.esVisible = true;
+  }
 
-      this.visible = false;
-    }
+  closeDialog() {
+    setTimeout(() => {
+      this.esVisible = false;
+    }, 100);
+  }
 }

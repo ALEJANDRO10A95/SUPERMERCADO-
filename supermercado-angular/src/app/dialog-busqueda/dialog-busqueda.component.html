@@ -1,14 +1,19 @@
-<div class="card flex justify-content-center">
-  <p-button (click)="showDialog()" icon="pi pi-search" label="Búsqueda"></p-button>
-  <p-dialog header="BÚSQUEDA DE PRODUCTOS" [(visible)]="visible" [style]="{width: '50vw'}">
-    <div class="dialog-header">
-    
-    </div>
-      <app-picklist-filter-demo></app-picklist-filter-demo>
+<span class="p-input-icon-left">
+  <i class="pi pi-search"></i>
+  <input pInputText type="text" #inputBuscar placeholder="Buscar productos" (keyup)="buscarProducto(inputBuscar.value)"
+    (focus)="showDialog()" (focusout)="closeDialog()">
 
-  </p-dialog>
-</div>
+  <!-- [(ngModel)]="productoSeleccionado" -->
+  <p-listbox class="listbox-busqueda" [options]="resultadoBusqueda"
+    (onClick)="redireccionaDetalleProducto($event.value.id)" optionLabel="nombre" [hidden]="!esVisible"
+    [listStyle]="{'max-height':'400px'}" emptyMessage="Sin resultados">
 
-
-
-
+    <ng-template let-producto pTemplate="item">
+      <!-- [routerLink]="['/producto', producto.id]" -->
+      <div class="flex align-items-center gap-2">
+        <img class="img-producto" [src]="'../assets/imagenes/productos/'+producto.imagen" [alt]="producto.nombre" />
+        <div>{{producto.nombre}}</div>
+      </div>
+    </ng-template>
+  </p-listbox>
+</span>
