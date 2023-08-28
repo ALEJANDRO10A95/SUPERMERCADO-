@@ -16,7 +16,6 @@ import { TableModule } from 'primeng/table';
 import { BadgeModule } from 'primeng/badge';
 import { PickListModule } from 'primeng/picklist';
 import { DialogModule } from 'primeng/dialog';
-import { PicklistFilterDemoComponent } from './picklist-filter-demo/picklist-filter-demo.component';
 import { DialogBusquedaComponent } from './dialog-busqueda/dialog-busqueda.component';
 import { DialogClienteComponent } from './dialog-cliente/dialog-cliente.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -27,12 +26,14 @@ import { CarritoCompraComponent } from './carrito-compra/carrito-compra.componen
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component'
 import { MenuModule } from 'primeng/menu';
 import { DropdownModule } from 'primeng/dropdown';
+import { ListboxModule } from 'primeng/listbox';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
-    PicklistFilterDemoComponent,
     DialogBusquedaComponent,
     DialogClienteComponent,
     ToolbarComponent,
@@ -60,7 +61,8 @@ import { DropdownModule } from 'primeng/dropdown';
     DataViewModule,
     BadgeModule,
     MenuModule,
-    DropdownModule
+    DropdownModule,
+    ListboxModule
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
   bootstrap: [AppComponent]
