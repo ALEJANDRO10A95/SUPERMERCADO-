@@ -26,9 +26,13 @@ export class DesplegableidiomasComponent implements OnInit {
       { name: 'Francés', code: 'FR' },
       { name: 'Alemán', code: 'AL' }
     ];
+
+    //Encontramos y dejamos seleccionado el idioma en uso
+    const currentLang: string = this.translateService.currentLang;
+    this.selectedLanguages = this.languages.find(lang => lang.code == currentLang);
   }
 
-  cambiarLenguaje(language: string): void {
-    this.translateService.use(language);
+  cambiaLenguaje(): void {
+    this.translateService.use(this.selectedLanguages!.code);
   }
 }

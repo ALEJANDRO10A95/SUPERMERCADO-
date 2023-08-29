@@ -12,7 +12,8 @@ export class AppComponent {
   title = 'Supermercado Angular';
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('ES');
-    translate.use('ES');
+    this.translate.addLangs(["AL","EN","ES","FR","IT"]);
+    this.translate.setDefaultLang('ES');
+    this.translate.use('ES');
   }
 }
