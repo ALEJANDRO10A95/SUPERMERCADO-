@@ -27,6 +27,10 @@ import { DetallesProductoComponent } from './detalles-producto/detalles-producto
 import { MenuModule } from 'primeng/menu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
+import { DesplegableidiomasComponent } from './desplegableidiomas/desplegableidiomas.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 
@@ -40,7 +44,8 @@ import { ListboxModule } from 'primeng/listbox';
     DataviewProductosComponent,
     DialogCarritoComponent,
     CarritoCompraComponent,
-    DetallesProductoComponent
+    DetallesProductoComponent,
+    DesplegableidiomasComponent
   ],
   imports: [
     BrowserModule,
@@ -62,9 +67,22 @@ import { ListboxModule } from 'primeng/listbox';
     BadgeModule,
     MenuModule,
     DropdownModule,
-    ListboxModule
+    ListboxModule,
+
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
