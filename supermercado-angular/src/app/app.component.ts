@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Cliente } from 'src/interfaces/cliente';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -10,5 +10,9 @@ import { Cliente } from 'src/interfaces/cliente';
 
 export class AppComponent {
   title = 'Supermercado Angular';
-}
 
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('ES');
+    translate.use('ES');
+  }
+}
