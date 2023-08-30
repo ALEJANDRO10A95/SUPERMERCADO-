@@ -27,6 +27,9 @@ import { DetallesProductoComponent } from './detalles-producto/detalles-producto
 import { MenuModule } from 'primeng/menu';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListboxModule } from 'primeng/listbox';
+import { ToggleButtonThemeComponent } from './toggle-button-theme/toggle-button-theme.component';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+
 
 
 
@@ -40,7 +43,8 @@ import { ListboxModule } from 'primeng/listbox';
     DataviewProductosComponent,
     DialogCarritoComponent,
     CarritoCompraComponent,
-    DetallesProductoComponent
+    DetallesProductoComponent,
+    ToggleButtonThemeComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,8 @@ import { ListboxModule } from 'primeng/listbox';
     BadgeModule,
     MenuModule,
     DropdownModule,
-    ListboxModule
+    ListboxModule,
+    ToggleButtonModule
   ],
   providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
   bootstrap: [AppComponent]
