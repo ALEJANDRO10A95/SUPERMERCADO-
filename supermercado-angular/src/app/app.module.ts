@@ -30,6 +30,10 @@ import { ListboxModule } from 'primeng/listbox';
 import { ToggleButtonThemeComponent } from './toggle-button-theme/toggle-button-theme.component';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 
+import { DesplegableidiomasComponent } from './desplegableidiomas/desplegableidiomas.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -44,7 +48,8 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
     DialogCarritoComponent,
     CarritoCompraComponent,
     DetallesProductoComponent,
-    ToggleButtonThemeComponent
+    ToggleButtonThemeComponent,
+    DesplegableidiomasComponent
   ],
   imports: [
     BrowserModule,
@@ -67,9 +72,22 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
     MenuModule,
     DropdownModule,
     ListboxModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
+  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}
