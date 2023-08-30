@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, Output, EventEmitter } from '@angular/core';
 import { Producto } from 'src/interfaces/producto';
 import { CarritoCompraService } from '../services/carrito-compra.service';
-import { Output, EventEmitter } from '@angular/core';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-carrito-compra',
@@ -11,6 +11,7 @@ import { Output, EventEmitter } from '@angular/core';
 export class CarritoCompraComponent {
   productos: Producto[] = [];
   @Output() cantidadEmitter = new EventEmitter<number>(); //para comunicar a componente padre la cantidad de Productos en el Carrito
+  @ViewChild('tableProductos') tableProductos: Table | undefined; //para actualizar la pagination de la Table, al añadir/quitar Productos
 
   constructor(private carritoCompraService: CarritoCompraService) {}
 
@@ -73,6 +74,7 @@ export class CarritoCompraComponent {
 
   actualizaCantidadEnCarrito() {
     this.cantidadEmitter.emit(this.calculaCantidadTotal());
+    this.tableProductos?.reset();
   }
 
   realizaCompra() {

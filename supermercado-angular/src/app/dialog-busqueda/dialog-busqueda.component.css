@@ -2,8 +2,12 @@ span {
     position: relative;
 }
 
+.input-busqueda {
+    width: 18rem;
+}
+
 .listbox-busqueda {
-    width: 15rem;
+    width: 18rem;
     position: absolute;
     z-index: 100;
     top: 50px;
