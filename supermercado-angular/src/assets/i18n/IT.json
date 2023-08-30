@@ -7,6 +7,8 @@
   "Realiza compra": "FARE UN ACQUISTO",
   "Precio total compra:": "PREZZO DI ACQUISTO INTERO",
   "Nombre": "NOME",
+  "Apellido": "Cognome",
+  "Apellido Es Requerido":"Il cognome è obbligatorio",
   "Cantidad": "QUANTITÀ",
   "Precio": "PREZZO",
   "Descripción": "DESCRIZIONE",
@@ -24,5 +26,15 @@
   "EMAIL INTRODUCIDO NO VALIDO": "L'email inserita non è valida",
   "CONTRASEÑA ES REQUERIDA": "Inserisci la tua password",
   "CONTRASEÑA DEBE TENER MINIMO 4 CARACTERES": "La password deve avere un minimo di 4 caratteri",
-  "EMAIL ES REQUERIDO": "Inserisci il tuo indirizzo email"
+  "EMAIL ES REQUERIDO": "Inserisci il tuo indirizzo email",
+  "Sin resultados": "Senza risultati",
+  "Iniciar sesión":"Login",
+  "Cerrar Cuenta":"Chiudere l'account",
+  "Registrate Como Cliente":"Registrati come cliente",
+  "Nombre Es Requerido":"Il nome è obbligatorio",
+  "Cancelar":"Annulla",
+  "Error":"Errore",
+  "Continuar":"Continua",
+  "Catálogo productos":"Catalogo dei prodotti",
+  "Selecciona un idoma":"Seleziona una lingua"
 }

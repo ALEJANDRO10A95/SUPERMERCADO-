@@ -7,13 +7,15 @@
   "Realiza compra":"Tramit purchase",
   "Precio total compra:": "Full Purchase Price",
   "Nombre": "Name",
+  "Apellido": "Last name",
+  "Apellido Es Requerido":"Last Name is Required",
   "Cantidad": "Amount",
   "Precio": "Price",
   "Descripción":"description",
   "Imagen" : "Image",
   "Categoria": "Category",
   "Cliente" : "Customer",
-  "Supermercado": "SuperMarket",
+  "Supermercado": "SUPERMARKET",
   "Ingresa o Regístrese":"Log In Or Register As A Customer",
   "Email": "Email",
   "Contraseña":"Password",
@@ -25,5 +27,18 @@
   "EMAIL INTRODUCIDO NO VALIDO":"The email entered is not valid",
   "CONTRASEÑA ES REQUERIDA":"Enter Your Password",
   "CONTRASEÑA DEBE TENER MINIMO 4 CARACTERES":"Password must have a minimum of 4 characters",
-  "EMAIL ES REQUERIDO":"Enter Your Email"
+  "EMAIL ES REQUERIDO":"Enter Your Email",
+  "Iniciar sesión":"Log in",
+  "Cerrar Cuenta":"Close account",
+  "Registrate Como Cliente":"Register as a client",
+  "Nombre Es Requerido":"Name is Required",
+  "Cancelar":"Cancel",
+  "Error":"Mistake",
+  "Continuar":"Continue",
+  "Sin resultados": "Without results",
+  "Catálogo productos":"Product catalog",
+  "Selecciona un idoma":"Select a language"
+
+
+
 }

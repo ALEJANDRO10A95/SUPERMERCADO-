@@ -7,6 +7,8 @@
   "Realiza compra": "EINEN KAUF TÄTIGEN",
   "Precio total compra:": "VOLLSTÄNDIGER KAUFPREIS",
   "Nombre": "NAME",
+  "Apellido": "Nachname",
+  "Apellido Es Requerido":"Nachname ist erforderlich",
   "Cantidad": "MENGE",
   "Precio": "PREIS",
   "Descripción":"BESCHREIBUNG",
@@ -25,5 +27,15 @@
   "EMAIL INTRODUCIDO NO VALIDO":"Die eingegebene E-Mail ist ungültig",
    "CONTRASEÑA ES REQUERIDA":"Geben Sie Ihr Passwort ein",
    "CONTRASEÑA DEBE TENER MINIMO 4 CARACTERES":"Das Passwort muss mindestens 4 Zeichen lang sein",
-   "EMAIL ES REQUERIDO":"Geben sie ihre E-Mail Adresse ein"
+   "EMAIL ES REQUERIDO":"Geben sie ihre E-Mail Adresse ein",
+   "Iniciar sesión":"Anmeldung",
+   "Cerrar Cuenta":"Konto schließen",
+   "Registrate Como Cliente":"Registrieren Sie sich als Kunde",
+   "Nombre Es Requerido":"Name ist erforderlich",
+   "Cancelar":"Stornieren",
+   "Error":"Fehler",
+   "Continuar":"Weitermachen",
+   "Sin resultados": "Ohne Ergebnisse",
+   "Catálogo productos":"Produktkatalog",
+   "Selecciona un idoma":"Wähle eine Sprache"
 }

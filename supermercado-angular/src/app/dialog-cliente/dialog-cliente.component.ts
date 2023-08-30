@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Cliente } from 'src/interfaces/cliente';
 import { LoginService } from '../services/login.service';
 import { MenuItem, MessageService } from 'primeng/api';
-
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-dialog-cliente',
   templateUrl: './dialog-cliente.component.html',
@@ -15,16 +15,20 @@ export class DialogClienteComponent {
 
   displayDialog: boolean = false;
   displayCreateAccountDialog: boolean = false;
- 
+
   items: MenuItem[] | undefined;
   loginForm: FormGroup = new FormGroup({
     email: new FormControl("", [Validators.required, Validators.email]),
     password: new FormControl("", [Validators.required, Validators.minLength(4)])
   });
 
-  constructor(private loginService: LoginService) { }
+  constructor(private translate: TranslateService, private loginService: LoginService) {
 
-  ngOnInit(): void {
+}
+iniciarSesionTraducido: string = this.translate.instant('Iniciar sesión');
+crearCuentaTraducido: string = this.translate.instant('Crear cuenta');
+
+ngOnInit(): void {
     this.loginService.clienteSubject$.subscribe(
       (cliente) => {
         this.clienteIngresado = cliente;
@@ -33,27 +37,34 @@ export class DialogClienteComponent {
 
     this.items = [
       {
-          
+
           items: [
               {
+
                   label: 'Iniciar sesión',
                   command: (event: any) => {
                     this.showDialog();
                 }
-                  
-                 
+
+
               },
               {
                   label: 'Crear cuenta',
                   command: (event: any) => {
                     this.showCreateAccountDialog();
                 }
-                  
+
               }
           ]
       },
-      
+
   ];
+
+  this.translate.onLangChange.subscribe(() => {
+    this.iniciarSesionTraducido = this.translate.instant('Iniciar sesión');
+    this.crearCuentaTraducido = this.translate.instant('Crear cuenta');
+  });
+
   }
 
   async loginCliente() {
@@ -74,7 +85,7 @@ export class DialogClienteComponent {
     this.loginService.logoutCliente();
   }
 
-  
+
   showDialog() {
     this.displayDialog = true;
   }
@@ -91,5 +102,5 @@ export class DialogClienteComponent {
     this.displayCreateAccountDialog = false;
   }
 
-  
 }
+

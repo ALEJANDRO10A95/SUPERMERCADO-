@@ -3,15 +3,15 @@
         <div class="div-logo">
             <img width="80" alt="Logo"
                 src="../../assets/imagenes/logos/logo_oesia_blanco_baja.png" />
-            <h3 class="titulo-logo">Supermercado</h3>
+            <h3 class="titulo-logo">{{"Supermercado"| translate}}</h3>
         </div>
     </a>
 
     <app-dialog-busqueda></app-dialog-busqueda>
-    <p-button label="Catálogo productos" [routerLink]="['/productos']"></p-button>
-    
+    <p-button label="{{'Catálogo productos'| translate}}" [routerLink]="['/productos']"></p-button>
+
     <div class="spacer"></div>
-    
+
     <app-desplegableidiomas></app-desplegableidiomas>
     <app-dialog-carrito></app-dialog-carrito>
     <app-dialog-cliente></app-dialog-cliente>

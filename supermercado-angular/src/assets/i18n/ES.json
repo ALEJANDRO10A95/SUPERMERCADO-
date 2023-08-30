@@ -7,13 +7,15 @@
   "Realiza compra": "Realiza Compra",
   "Precio total compra:": "Precio Total De Compra",
   "Nombre": "Nombre",
+  "Apellido": "Apellido",
+  "Apellido Es Requerido":"Introduzca Su Apellido",
   "Cantidad": "Cantidad",
   "Precio": "Precio",
   "Descripción": "DescripciÓn",
   "Imagen": "Imagen",
   "Categoria": "Categoria",
   "Cliente": "Cliente",
-  "Supermercado": "SuperMercado",
+  "Supermercado": "SUPERMERCADO",
   "Ingresa o Regístrese": "Ingresa o registrate como cliente",
   "Email": "Email",
   "Contraseña": "Contraseña",
@@ -25,5 +27,18 @@
   "EMAIL INTRODUCIDO NO VALIDO": "El Email Introducido No Es Válido",
   "CONTRASEÑA ES REQUERIDA": "Introduzca Su Contraseña",
   "CONTRASEÑA DEBE TENER MINIMO 4 CARACTERES": "contraseña debe tener un mínimo de 4 caracteres",
-  "EMAIL ES REQUERIDO": "Introduzca Su Email"
+  "EMAIL ES REQUERIDO": "Introduzca Su Email",
+  "Sin resultados": "Sin resultados",
+  "Iniciar sesión":"Iniciar Sesión",
+  "Cerrar Cuenta":"Cerrar Cuenta",
+  "Registrate Como Cliente":"Registrate como Cliente",
+  "Nombre Es Requerido":"Introduzca Su Nombre",
+  "Cancelar":"Cancelar",
+  "Error":"Error",
+  "Continuar":"Continuar",
+  "Catálogo productos":"Catálogo productos",
+  "Selecciona un idoma":"Selecciona un idoma"
+
+
+
 }

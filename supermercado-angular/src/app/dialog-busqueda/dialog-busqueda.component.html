@@ -1,12 +1,12 @@
 <span class="p-input-icon-left">
   <i class="pi pi-search"></i>
-  <input pInputText type="text" #inputBuscar placeholder="Buscar productos" (keyup)="buscarProducto(inputBuscar.value)"
+  <input pInputText type="text" #inputBuscar placeholder="{{'Búsqueda de Productos'|translate}}" (keyup)="buscarProducto(inputBuscar.value)"
     (focus)="showDialog()" (focusout)="closeDialog()">
 
   <!-- [(ngModel)]="productoSeleccionado" -->
   <p-listbox class="listbox-busqueda" [options]="resultadoBusqueda"
     (onClick)="redireccionaDetalleProducto($event.value.id)" optionLabel="nombre" [hidden]="!esVisible"
-    [listStyle]="{'max-height':'400px'}" emptyMessage="Sin resultados">
+    [listStyle]="{'max-height':'400px'}" emptyMessage="{{'Sin resultados'| translate}}">
 
     <ng-template let-producto pTemplate="item">
       <!-- [routerLink]="['/producto', producto.id]" -->

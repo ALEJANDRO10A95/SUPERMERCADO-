@@ -1,6 +1,6 @@
 <p-button (click)="show()">
     <i class="pi pi-shopping-cart badge" pBadge value="{{cantidadEnCarrito}}"></i>
 </p-button>
-<p-dialog header="Carrito de la compra" class="dialog-carrito" [(visible)]="esDialogVisible" [resizable]="false" [maximizable]="true">
+<p-dialog header="{{'Carrito de la compra'|translate}}" class="dialog-carrito" [(visible)]="esDialogVisible" [resizable]="false" [maximizable]="true">
     <app-carrito-compra (cantidadEmitter)="setCantidadEnCarrito($event)"></app-carrito-compra>
 </p-dialog>
