@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cliente } from 'src/interfaces/cliente';
 
@@ -7,10 +8,21 @@ import { Cliente } from 'src/interfaces/cliente';
 export class ClienteService {
   url: string = 'http://localhost:3000';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  registroNuevoCliente(email: string, password: string) {
-    //TODO
+  async registroNuevoCliente(nombre: string, apellidos: string, email: string, pass: string) {
+    let params = new HttpParams({
+      fromObject: { 'nombre': nombre, 'apellidos': apellidos, 'email': email, 'pass': pass }
+    });
+
+    let options = {
+      headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+    };
+
+    this.http.post(this.url+'/cliente/createCliente', params, options)
+      .subscribe(response => {
+        return response;
+      });
   }
 
   async getAllClientes(): Promise<Cliente[]> {
@@ -18,19 +30,19 @@ export class ClienteService {
     return await data.json() ?? [];
   }
 
-  async getClienteById(id: number): Promise<Cliente|undefined> {
+  async getClienteById(id: number): Promise<Cliente | undefined> {
     const data: Response = await fetch(this.url + "/cliente/" + id);
     return await data.json();
   }
 
-  async getClienteByEmail(email: string): Promise<Cliente|undefined> {
+  async getClienteByEmail(email: string): Promise<Cliente | undefined> {
     const response: Response = await fetch(this.url + "/cliente/email/" + email);
 
     let data;
-    try{
+    try {
       data = await response.json();
     }
-    catch{
+    catch {
     }
     return data;
   }

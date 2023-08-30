@@ -4,7 +4,7 @@
         <h3>{{'Precio total compra:' | translate}}</h3>
         <h2>{{calculaPrecioTotal() | currency}}</h2>
     </div>
-    <p-table [value]="productos" responsiveLayout="scroll" [paginator]="true" [rows]="5" [responsive]="true">
+    <p-table [value]="productos" responsiveLayout="scroll" [paginator]="true" [rows]="5">
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="nombre">{{'Nombre' | translate}}</th>
