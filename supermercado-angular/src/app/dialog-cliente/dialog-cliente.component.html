@@ -40,16 +40,15 @@
 <p-dialog header="{{'Registrate Como Cliente'|translate}}" [(visible)]="displayCreateAccountDialog" [modal]="true" [resizable]="false"
     class="dialog">
 
-    <form [formGroup]="loginForm" (submit)="loginCliente()" class="grid-container">
-
+    <form [formGroup]="registerForm" (submit)="registraCliente()" class="grid-container">
         <div class="grid1">
             <div class="label-input">
                 <label for="nombre">{{"Nombre"|translate}}</label>
                 <input pInputText id="nombre" name="nombre" type="text" formControlName="nombre" required>
             </div>
-            <div *ngIf="loginForm.controls['nombre']?.invalid && (loginForm.dirty || loginForm.touched)">
-                <p-message severity="{{'Error'|translate}}" *ngIf="loginForm.controls['nombre']?.errors?.['required']"
-                    text="{{'Nombre Es Requerido'|translate}}"></p-message>
+            <div *ngIf="registerForm.controls['nombre']?.invalid && (registerForm.dirty || registerForm.touched)">
+                <p-message severity="error" *ngIf="registerForm.controls['nombre']?.errors?.['required']"
+                    text="nombre es requerido."></p-message>
             </div>
         </div>
 
@@ -58,9 +57,9 @@
                 <label for="apellido">{{'Apellido'|translate}}</label>
                 <input pInputText id="apellido" name="apellido" type="text" formControlName="apellido" required>
             </div>
-            <div *ngIf="loginForm.controls['apellido']?.invalid && (loginForm.dirty || loginForm.touched)">
-                <p-message severity="{{'Error'|translate}}" *ngIf="loginForm.controls['apellido']?.errors?.['required']"
-                    text="{{'Apellido Es Requerido'|translate}}"></p-message>
+            <div *ngIf="registerForm.controls['apellido']?.invalid && (registerForm.dirty || registerForm.touched)">
+                <p-message severity="error" *ngIf="registerForm.controls['apellido']?.errors?.['required']"
+                    text="apellido es requerido."></p-message>
             </div>
         </div>
 
@@ -69,11 +68,11 @@
                 <label for="email">{{"Email"|translate}}</label>
                 <input pInputText id="email" name="email" type="text" formControlName="email" required>
             </div>
-            <div *ngIf="loginForm.controls['email']?.invalid && (loginForm.dirty || loginForm.touched)">
-                <p-message severity="{{'Error'|translate}}"  *ngIf="loginForm.controls['email']?.errors?.['required']"
-                    text="{{'EMAIL ES REQUERIDO'|translate}}"></p-message>
-                <p-message severity="{{'Error'|translate}}"  *ngIf="loginForm.controls['email']?.errors?.['email']"
-                    text="{{'EMAIL INTRODUCIDO NO VALIDO'|translate}}"></p-message>
+            <div *ngIf="registerForm.controls['email']?.invalid && (registerForm.dirty || registerForm.touched)">
+                <p-message severity="error" *ngIf="registerForm.controls['email']?.errors?.['required']"
+                    text="email es requerido."></p-message>
+                <p-message severity="error" *ngIf="registerForm.controls['email']?.errors?.['email']"
+                    text="email introducido no es válido."></p-message>
             </div>
         </div>
 
@@ -82,17 +81,17 @@
                 <label for="password">{{"Contraseña"|translate}}</label>
                 <input pInputText id="password" name="password" type="password" formControlName="password" required>
             </div>
-            <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.dirty || loginForm.touched)">
-                <p-message severity="{{'Error'|translate}}"  *ngIf="loginForm.controls['password']?.errors?.['required']"
-                    text="{{ 'CONTRASEÑA ES REQUERIDA' | translate }}"></p-message>
-                <p-message severity="{{'Error'|translate}}"  *ngIf="loginForm.controls['password']?.errors?.['minLength']"
-                    text="{{ 'CONTRASEÑA DEBE TENER MINIMO 4 CARACTERES' | translate }}"></p-message>
+            <div *ngIf="registerForm.controls['password']?.invalid && (registerForm.dirty || registerForm.touched)">
+                <p-message severity="error" *ngIf="registerForm.controls['password']?.errors?.['required']"
+                    text="constraseña es requerida."></p-message>
+                <p-message severity="error" *ngIf="registerForm.controls['password']?.errors?.['minLength']"
+                    text="contraseña debe tener un mínimo de 4 caracteres."></p-message>
             </div>
         </div>
 
         <div class="grid5">
-            <p-button type="submit" class="primary" [disabled]="loginForm.invalid">{{ 'Continuar' | translate }}</p-button>
-            <button pButton type="button" label="{{ 'Cancelar' | translate }}" (click)="closeCreateAccountDialog()"></button>
+            <p-button type="submit" class="primary" [disabled]="registerForm.invalid">Continuar</p-button>
+            <button pButton type="button" label="Cancelar" (click)="closeCreateAccountDialog()"></button>
         </div>
     </form>
 </p-dialog>
