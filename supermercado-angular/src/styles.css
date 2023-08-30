@@ -102,6 +102,16 @@ body, html {
   border-radius: 10px !important;
 }
 
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+  background-color: #f27474 !important;
+  box-shadow: none !important;
+}
+
+body.swal2-shown > [aria-hidden="true"] {
+  transition: 0.1s filter;
+  filter: blur(10px);
+}
+
 * {
   box-sizing: border-box;
 }

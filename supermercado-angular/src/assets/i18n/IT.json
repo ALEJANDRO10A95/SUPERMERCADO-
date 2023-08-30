@@ -36,5 +36,6 @@
   "Error":"Errore",
   "Continuar":"Continua",
   "Catálogo productos":"Catalogo dei prodotti",
-  "Selecciona un idoma":"Seleziona una lingua"
+  "Selecciona un idoma":"Seleziona una lingua",
+  "ERROR InicioSesion" : "Il nome utente e la password non corrispondono"
 }

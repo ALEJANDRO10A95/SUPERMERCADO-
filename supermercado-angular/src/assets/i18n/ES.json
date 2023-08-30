@@ -37,8 +37,6 @@
   "Error":"Error",
   "Continuar":"Continuar",
   "Catálogo productos":"Catálogo productos",
-  "Selecciona un idoma":"Selecciona un idoma"
-
-
-
+  "Selecciona un idoma":"Selecciona un idoma",
+  "ERROR InicioSesion" : "El usuario y contraseña no coinciden"
 }

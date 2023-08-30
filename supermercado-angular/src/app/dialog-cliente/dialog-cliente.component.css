@@ -2,6 +2,7 @@
     width: 50vw;
     z-index:9999 !important
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -37,7 +37,8 @@
   "Continuar":"Continue",
   "Sin resultados": "Without results",
   "Catálogo productos":"Product catalog",
-  "Selecciona un idoma":"Select a language"
+  "Selecciona un idoma":"Select a language",
+  "ERROR InicioSesion" : "Username and password do not match"
 
 
 
