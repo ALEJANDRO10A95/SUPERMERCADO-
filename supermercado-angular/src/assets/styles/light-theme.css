@@ -1,0 +1,65 @@
+
+:root {
+  --surface-a: #e6e6e6;
+  --surface-b: #f2f2f2;
+  --surface-c: #e6e6e6;
+  --surface-d: #d1d1d1;
+  --surface-e: #e6e6e6;
+  --surface-f: #e6e6e6;
+  --text-color: #1f1f1f;
+  --text-color-secondary: #383838;
+  --primary-color: #762158;
+  --primary-color-text: #c7c7c7;
+  --font-family: Lato, Helvetica, sans-serif;
+  --surface-0: #0e1315;
+  --surface-50: #262b2c;
+  --surface-100: #3e4244;
+  --surface-200: #565a5b;
+  --surface-300: #6e7173;
+  --surface-400: #87898a;
+  --surface-500: #9fa1a1;
+  --surface-600: #b7b8b9;
+  --surface-700: #cfd0d0;
+  --surface-800: #e7e7e8;
+  --surface-900: #ffffff;
+  --gray-50: #e7e7e8;
+  --gray-100: #cfd0d0;
+  --gray-200: #b7b8b9;
+  --gray-300: #9fa1a1;
+  --gray-400: #87898a;
+  --gray-500: #6e7173;
+  --gray-600: #565a5b;
+  --gray-700: #3e4244;
+  --gray-800: #262b2c;
+  --gray-900: #0e1315;
+  --content-padding: 1rem;
+  --inline-spacing: 0.5rem;
+  --border-radius: 6px;
+  --surface-ground: #e7e7e7;
+  --surface-section: #c1c1c1;
+  --surface-card: #ffffff;
+  --surface-overlay: #161d21;
+  --surface-border: #848687;
+  --surface-hover: rgba($primaryColor, 0.08);
+  --maskbg: rgba(0, 0, 0, 0.4);
+  --focus-ring: 0 0 0 1px #762158;
+  --highlight-bg: #ffffff;
+  --highlight-text-color: #9eade6;
+  color-scheme: light;
+}
+
+.p-dataview-header{
+  background: var(--surface-section) !important;
+  transition: background 0.5s ease-out, boder-color 0.5s ease-out;
+  border-color: var(--surface-border) !important;
+}
+
+.surface-card{
+  color: var(--text-color);
+  transition: background-color 0.5s ease-out;
+}
+
+.p-dataview .p-dataview-content{
+  background: var(--surface-section) !important;
+  transition: background 0.5s ease-out;
+}
