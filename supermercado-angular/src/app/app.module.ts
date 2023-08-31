@@ -35,6 +35,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { CargaComponent } from './carga/carga.component';
 
 
 
@@ -51,7 +52,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     DetallesProductoComponent,
     ToggleButtonThemeComponent,
     DesplegableidiomasComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    CargaComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
       }
     })
   ],
-  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
+  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

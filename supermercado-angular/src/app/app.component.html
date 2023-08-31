@@ -1,6 +1,9 @@
+
+
 <app-toolbar></app-toolbar>
 
 <div class="content" role="main">
 </div>
 
 <router-outlet></router-outlet>
+<app-carga *ngIf="loadingService.loading$ | async"></app-carga>
