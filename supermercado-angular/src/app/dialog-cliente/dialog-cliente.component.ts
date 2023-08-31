@@ -5,7 +5,7 @@ import { LoginService } from '../services/login.service';
 import { MenuItem, MessageService } from 'primeng/api';
 import Swal from 'sweetalert2';
 import { TranslateService } from '@ngx-translate/core';
-
+import { CargaComponent } from '../carga/carga.component';
 @Component({
   selector: 'app-dialog-cliente',
   templateUrl: './dialog-cliente.component.html',
@@ -39,7 +39,8 @@ export class DialogClienteComponent {
 
   constructor(
     private translate: TranslateService,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private CargaComponent: CargaComponent
   ) {}
   iniciarSesionTraducido: string = this.translate.instant('Iniciar sesión');
   crearCuentaTraducido: string = this.translate.instant('Crear cuenta');
@@ -72,12 +73,13 @@ export class DialogClienteComponent {
   async loginCliente() {
     let email: string = this.loginForm.get('email')?.value;
     let password: string = this.loginForm.get('password')?.value;
-
+    this.CargaComponent.mostrar()
     let loginResponse: Response = await this.loginService.loginCliente(
       email,
       password
     );
     if (!loginResponse.ok) {
+      this.CargaComponent.ocultar()
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -126,4 +128,6 @@ export class DialogClienteComponent {
   closeCreateAccountDialog() {
     this.displayCreateAccountDialog = false;
   }
+
+
 }

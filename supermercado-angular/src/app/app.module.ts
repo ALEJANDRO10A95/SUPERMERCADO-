@@ -34,6 +34,7 @@ import { DesplegableidiomasComponent } from './desplegableidiomas/desplegableidi
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CargaComponent } from './carga/carga.component';
 
 
 
@@ -49,7 +50,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CarritoCompraComponent,
     DetallesProductoComponent,
     ToggleButtonThemeComponent,
-    DesplegableidiomasComponent
+    DesplegableidiomasComponent,
+    CargaComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +85,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
       }
     })
   ],
-  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
+  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}, { provide:  CargaComponent}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
