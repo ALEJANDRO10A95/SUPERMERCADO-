@@ -34,6 +34,7 @@ import { DesplegableidiomasComponent } from './desplegableidiomas/desplegableidi
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginpageComponent } from './loginpage/loginpage.component';
 
 
 
@@ -49,7 +50,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CarritoCompraComponent,
     DetallesProductoComponent,
     ToggleButtonThemeComponent,
-    DesplegableidiomasComponent
+    DesplegableidiomasComponent,
+    LoginpageComponent
   ],
   imports: [
     BrowserModule,
