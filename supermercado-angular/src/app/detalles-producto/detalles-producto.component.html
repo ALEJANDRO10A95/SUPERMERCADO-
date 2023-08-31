@@ -9,7 +9,7 @@
         <div class="detalles">
             <h3>{{ product?.nombre }}</h3>
             <p>{{"Precio"|translate}}: {{ product?.precio | currency }}</p>
-            <p>{{"Categoria"|translate}}: {{ product?.categoria }}</p>
+            <p>{{"Categoria"|translate}}: {{ product?.categoria ?? ""| translate}}</p>
             <p>{{"Descripción"|translate}}: {{ product?.descripcion }}</p>
             <p-button (onClick)="agregaAcarritoCompra(product!)" icon="pi pi-cart-plus" label="{{'Agrega al Carrito'|translate}}"></p-button>
 

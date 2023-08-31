@@ -11,9 +11,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: var(--surface-100);
+    background-color: var(--surface-card);
     border-radius: 8px;
     padding: 20px;
+    transition: background-color 0.5s ease-out
 }
 
 .imagen-producto {

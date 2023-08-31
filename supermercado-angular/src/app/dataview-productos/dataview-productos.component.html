@@ -5,7 +5,7 @@
                 <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
             </div>
         </ng-template>
-        
+
         <ng-template let-producto pTemplate="listItem">
             <div class="col-12">
                 <div class="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
@@ -17,7 +17,7 @@
                             <div class="flex align-items-center gap-3">
                                 <span class="flex align-items-center gap-2">
                                     <i class="pi pi-tag"></i>
-                                    <span class="font-semibold">{{ producto.categoria }}</span>
+                                    <span class="font-semibold">{{ producto.categoria | translate}}</span>
                                 </span>
                                 <!-- <p-tag [value]="producto.inventoryStatus" [severity]="getSeverity(product)"></p-tag> -->
                             </div>
@@ -31,14 +31,14 @@
                 </div>
             </div>
         </ng-template>
-        
+
         <ng-template let-producto pTemplate="gridItem">
             <div class="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
                 <div class="p-4 border-1 surface-border surface-card border-round">
                     <div class="flex flex-wrap align-items-center justify-content-between gap-2">
                         <span class="flex align-items-center gap-2">
                             <i class="pi pi-tag"></i>
-                            <span class="font-semibold">{{ producto.categoria }}</span>
+                            <span class="font-semibold">{{producto.categoria | translate}}</span>
                         </span>
                         <!-- <p-tag [value]="producto.inventoryStatus" [severity]="getSeverity(product)"></p-tag> -->
                     </div>

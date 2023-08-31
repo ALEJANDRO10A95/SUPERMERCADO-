@@ -75,7 +75,6 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     DropdownModule,
     ListboxModule,
     ToggleButtonModule,
-
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
