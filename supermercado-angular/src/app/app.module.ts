@@ -73,7 +73,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     DropdownModule,
     ListboxModule,
     ToggleButtonModule,
-
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
