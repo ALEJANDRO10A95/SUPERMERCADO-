@@ -5,7 +5,8 @@ import { LoginService } from '../services/login.service';
 import { MenuItem, MessageService } from 'primeng/api';
 import Swal from 'sweetalert2';
 import { TranslateService } from '@ngx-translate/core';
-import { CargaComponent } from '../carga/carga.component';
+import { LoadingService } from '../services/loader.service';
+
 @Component({
   selector: 'app-dialog-cliente',
   templateUrl: './dialog-cliente.component.html',
@@ -40,7 +41,7 @@ export class DialogClienteComponent {
   constructor(
     private translate: TranslateService,
     private loginService: LoginService,
-    private CargaComponent: CargaComponent
+    public loadingService: LoadingService
   ) {}
   iniciarSesionTraducido: string = this.translate.instant('Iniciar sesión');
   crearCuentaTraducido: string = this.translate.instant('Crear cuenta');
@@ -73,25 +74,25 @@ export class DialogClienteComponent {
   async loginCliente() {
     let email: string = this.loginForm.get('email')?.value;
     let password: string = this.loginForm.get('password')?.value;
-    this.CargaComponent.mostrar()
+    this.loadingService.show();
     let loginResponse: Response = await this.loginService.loginCliente(
       email,
       password
     );
+    this.loadingService.hide();
     if (!loginResponse.ok) {
-      this.CargaComponent.ocultar()
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: this.translate.instant('ERROR InicioSesion'),
-        // timer: 2000,
-        // timerProgressBar: true,
-        background: "#282f33",
-        color: "rgb(229 229 229)",
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#282f33',
+        color: 'rgb(229 229 229)',
       });
+
       return;
     }
-
     this.esDialogVisible = false;
   }
 
@@ -128,6 +129,4 @@ export class DialogClienteComponent {
   closeCreateAccountDialog() {
     this.displayCreateAccountDialog = false;
   }
-
-
 }

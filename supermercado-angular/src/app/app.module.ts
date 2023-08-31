@@ -85,7 +85,7 @@ import { CargaComponent } from './carga/carga.component';
       }
     })
   ],
-  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}, { provide:  CargaComponent}],
+  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
