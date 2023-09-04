@@ -10,10 +10,13 @@ import { Table } from 'primeng/table';
 })
 export class CarritoCompraComponent {
   productos: Producto[] = [];
+
   @Output() cantidadEmitter = new EventEmitter<number>(); //para comunicar a componente padre la cantidad de Productos en el Carrito
   @ViewChild('tableProductos') tableProductos: Table | undefined; //para actualizar la pagination de la Table, al añadir/quitar Productos
 
-  constructor(private carritoCompraService: CarritoCompraService) {}
+  constructor(private carritoCompraService: CarritoCompraService) {
+
+  }
 
   ngOnInit(): void {
     this.carritoCompraService.producto$.subscribe((producto: Producto) => this.agregaProducto(producto));
@@ -78,7 +81,6 @@ export class CarritoCompraComponent {
   }
 
   realizaCompra() {
-    
   }
 
   getSeverity(status: string) {

@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: CarouselComponent },
   { path: 'productos', component: DataviewProductosComponent },
   { path: 'producto/:id', component: DetallesProductoComponent },
-  {path: 'login',component: LoginpageComponent}
+  { path: 'login',component: LoginpageComponent }
 ];
 
 @NgModule({

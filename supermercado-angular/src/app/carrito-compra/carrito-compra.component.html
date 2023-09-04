@@ -1,6 +1,6 @@
 <div>
     <div class="flex">
-        <p-button (click)="realizaCompra()">{{'Realiza compra' | translate}}</p-button>
+        <app-dialog-plataformapago></app-dialog-plataformapago>
         <h3 class="m-left">{{'Precio total compra:' | translate}}</h3>
         <h2 class="m-left">{{calculaPrecioTotal() | currency}}</h2>
     </div>
@@ -34,3 +34,4 @@
         </ng-template>
     </p-table>
 </div>
+
