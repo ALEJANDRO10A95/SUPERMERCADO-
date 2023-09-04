@@ -110,6 +110,15 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   box-shadow: none !important;
 }
 
+.p-dialog .p-dialog-header, .p-dialog .p-dialog-content{
+  background: var(--surface-card) !important;
+  border-color: var(--surface-border) !important;
+  color: var(--text-color-secondary) !important;
+}
+
+.p-inputtext{
+
+}
 
 .surface-card{
   transition: background-color 0.5s ease-out;

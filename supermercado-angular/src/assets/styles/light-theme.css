@@ -63,3 +63,14 @@
   background: var(--surface-section) !important;
   transition: background 0.5s ease-out;
 }
+
+
+.p-input-filled .p-cascadeselect {
+  background: #dddddd !important;
+}
+.p-input-filled .p-cascadeselect:not(.p-disabled):hover {
+  background-color: #d7d7d7 !important;
+}
+.p-input-filled .p-cascadeselect:not(.p-disabled).p-focus {
+  background-color: #d8d8d8 !important;
+}

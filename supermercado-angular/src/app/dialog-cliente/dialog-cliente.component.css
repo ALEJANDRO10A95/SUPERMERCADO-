@@ -3,6 +3,9 @@
     z-index:9999 !important
 }
 
+.p-dialog{
+  background: var(--surface-card) !important;
+}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
