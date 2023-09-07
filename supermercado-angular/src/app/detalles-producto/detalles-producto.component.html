@@ -9,7 +9,7 @@
         <div class="detalles">
             <h3>{{ product?.nombre }}</h3>
             <p>{{"Precio"|translate}}: {{ product?.precio | currency }}</p>
-            <p>{{"Categoria"|translate}}: {{ product?.categoria }}</p>
+            <p>{{"Categoria"|translate}}: {{ product?.categoria ?? ""| translate}}</p>
             <p>{{"Descripción"|translate}}: {{ product?.descripcion }}</p>
             <!-- AGREGAMOS UN BOTÓN, PARA QUE CADA VEZ QUE SE SELECCIONE ESE PRODUCTO SE PASE A LA LISTA EN EL CARRITO, SI EL PRODUCTO YA ESTA EN LA LISTA Y SE SELECCIONA DE NUEVO SE AUMENTA LA CANTIDAD DE ESE PRODUCTO -->
             <p-button (onClick)="agregaAcarritoCompra(product!)" icon="pi pi-cart-plus" label="{{'Agrega al Carrito'|translate}}"></p-button>

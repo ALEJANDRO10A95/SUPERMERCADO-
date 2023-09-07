@@ -5,6 +5,7 @@ import { LoginService } from '../services/login.service';
 import { MenuItem, MessageService } from 'primeng/api';
 import Swal from 'sweetalert2';
 import { TranslateService } from '@ngx-translate/core';
+import { LoadingService } from '../services/loader.service';
 
 @Component({
   selector: 'app-dialog-cliente',
@@ -39,7 +40,8 @@ export class DialogClienteComponent {
 
   constructor(
     private translate: TranslateService,
-    private loginService: LoginService
+    private loginService: LoginService,
+    public loadingService: LoadingService
   ) {}
   iniciarSesionTraducido: string = this.translate.instant('Iniciar sesión');
   crearCuentaTraducido: string = this.translate.instant('Crear cuenta');
@@ -72,24 +74,25 @@ export class DialogClienteComponent {
   async loginCliente() {
     let email: string = this.loginForm.get('email')?.value;
     let password: string = this.loginForm.get('password')?.value;
-
-    let loginResponse: Response = await this.loginService.loginCliente(
+    this.loadingService.show();
+    let loginResponse = await this.loginService.loginCliente(
       email,
       password
     );
+    this.loadingService.hide();
     if (!loginResponse.ok) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: this.translate.instant('ERROR InicioSesion'),
-        // timer: 2000,
-        // timerProgressBar: true,
-        background: "#282f33",
-        color: "rgb(229 229 229)",
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#282f33',
+        color: 'rgb(229 229 229)',
       });
+
       return;
     }
-
     this.esDialogVisible = false;
   }
 
@@ -98,13 +101,39 @@ export class DialogClienteComponent {
     let apellido: string = this.registerForm.get('apellido')?.value;
     let email: string = this.registerForm.get('email')?.value;
     let password: string = this.registerForm.get('password')?.value;
-
-    let loginResponse: Response = await this.loginService.registroNuevoCliente(
+    let loginResponse;
+    try {
+      let loginResponse: boolean = await this.loginService.registroNuevoCliente(
       nombre,
       apellido,
       email,
       password
     );
+    } catch (error) {
+      console.log(error)
+    }
+
+
+    if(loginResponse === true){
+      Swal.fire({
+        icon: 'success',
+        text: this.translate.instant('SUCCESS creacion usuario'),
+        // timer: 2000,
+        // timerProgressBar: true,
+        background: '#282f33',
+        color: 'rgb(229 229 229)',
+      });
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: this.translate.instant('ERROR Creacion usuario'),
+        // timer: 2000,
+        // timerProgressBar: true,
+        background: '#282f33',
+        color: 'rgb(229 229 229)',
+      });
+    }
   }
 
   logoutCliente() {

@@ -1,0 +1,7 @@
+<p-button (click)="mostrarCarrito()">
+  {{'Realiza compra' | translate}}
+</p-button>
+<p-dialog header="{{'Plataforma de pago'|translate}}" [(visible)]="esVisible" [resizable]="false">
+  <app-plataforma-pago></app-plataforma-pago>
+</p-dialog>
+

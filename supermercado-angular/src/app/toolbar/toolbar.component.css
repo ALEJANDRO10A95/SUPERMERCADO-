@@ -39,3 +39,8 @@ app-dialog-cliente {
 app-toggle-button-theme{
   margin: 19px;
 }
+
+.p-button, button{
+  background: transparent !important;
+  border: none !important;
+}

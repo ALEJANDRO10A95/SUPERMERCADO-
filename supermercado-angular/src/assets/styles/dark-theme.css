@@ -6,6 +6,8 @@
 body, html {
   font-family: var(--font-family);
   background: var(--surface-ground);
+  transition: background-color 0.5s ease-out,  color 0.5s ease-out;
+
 }
 
 :root {
@@ -56,37 +58,38 @@ body, html {
   --highlight-text-color: #e28dba;
   color-scheme: dark;
 }
+
 @font-face {
   font-family: "Century_Gothic";
   font-style: normal;
   font-weight: 300;
   src:
-    url("assets/fonts/GOTHIC.woff2") format("woff2"),
-    url("assets/fonts/GOTHIC.woff2") format("woff2");
+    url("../fonts/GOTHIC.woff2") format("woff2"),
+    url("../fonts/GOTHIC.woff2") format("woff2");
 }
 @font-face {
   font-family: "Century_Gothic";
   font-style: normal;
   font-weight: 400;
   src:
-  url("assets/fonts/GOTHIC.woff2") format("woff2"),
-  url("assets/fonts/GOTHIC.woff2") format("woff2");
+  url("../fonts/GOTHIC.woff2") format("woff2"),
+  url("../fonts/GOTHIC.woff2") format("woff2");
 }
 @font-face {
   font-family: "Century_Gothic";
   font-style: normal;
   font-weight: 600;
   src:
-  url("assets/fonts/GOTHIC.woff2") format("woff2"),
-  url("assets/fonts/GOTHIC.woff2") format("woff2");
+  url("../fonts/GOTHIC.woff2") format("woff2"),
+  url("../fonts/GOTHIC.woff2") format("woff2");
 }
 @font-face {
   font-family: "Century_Gothic";
   font-style: normal;
   font-weight: 700;
   src:
-  url("assets/fonts/GOTHIC.woff2") format("woff2"),
-  url("assets/fonts/GOTHIC.woff2") format("woff2");
+  url("../fonts/GOTHIC.woff2") format("woff2"),
+  url("../fonts/GOTHIC.woff2") format("woff2");
 }
 
 @font-face {
@@ -94,8 +97,8 @@ body, html {
   font-style: normal;
   font-weight: 700;
   src:
-  url("assets/fonts/ERASDEMI.woff2") format("woff2"),
-  url("assets/fonts/ERASDEMI.woff2") format("woff2");
+  url("../fonts/ERASDEMI.woff2") format("woff2"),
+  url("../fonts/ERASDEMI.woff2") format("woff2");
 }
 
 .p-link{
@@ -107,9 +110,27 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   box-shadow: none !important;
 }
 
+.p-dialog .p-dialog-header, .p-dialog .p-dialog-content{
+  background: var(--surface-card) !important;
+  border-color: var(--surface-border) !important;
+  color: var(--text-color-secondary) !important;
+}
+
+.p-inputtext{
+
+}
+
+.surface-card{
+  transition: background-color 0.5s ease-out;
+}
+
 body.swal2-shown > [aria-hidden="true"] {
   transition: 0.1s filter;
   filter: blur(10px);
+}
+
+.p-dialog-mask.p-component-overlay{
+  backdrop-filter: blur(5px);
 }
 
 * {

@@ -39,11 +39,35 @@
   "Catálogo productos": "Catálogo productos",
   "Selecciona un idoma": "Selecciona un idoma",
   "ERROR InicioSesion": "El usuario y contraseña no coinciden",
+  "ERROR Creacion usuario": "El email ya existe",
+  "SUCCESS creacion usuario" : "Usuario creado correctamente",
   "Volver atrás": "Volver atrás",
   "Características del Producto": "Características del Producto",
   "Agrega al Carrito": "Agrega Al Carrito",
+<<<<<<< HEAD
   "Ofertas Destacadas": "Ofertas Destacadas",
   "Catálogo de productos":"Catálogo de productos",
   "Listado de productos":"Listado de productos"
+=======
+  "PESCADO_MARISCO" : "Pescado Marisco",
+  "LACTEOS" : "Lacteos",
+  "ACEITES": "Aceites",
+  "AGUA_BEBIDAS": "Aguas Bebidas",
+  "LEGUMBRES": "Legumbres",
+  "DULCES_POSTRES": "Dulces Postres",
+  "BODEGA": "Bodega",
+  "INFUSIONES": "Infusiones",
+  "CEREALES": "Cereales",
+  "CHARCUTERIA": "Charcuteria",
+  "CONGELADOS": "Congelados",
+  "CONSERVAS": "Conservas",
+  "HIGIENE":"Higiene" ,
+  "FRUTA_VERDURA": "Fruta y verdura",
+  "CARNE_HUEVOS": "Carne y huevos",
+  "PROFILACTICOS": "Profilacticos",
+  "LIMPIEZA_HOGAR": "Limpieza Hogar",
+  "PANADERIA": "Panaderia",
+  "Plataforma de pago" : "Plataforma de pago"
+>>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 
 }

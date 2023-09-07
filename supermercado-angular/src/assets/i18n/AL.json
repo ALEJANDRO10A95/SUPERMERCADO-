@@ -39,10 +39,34 @@
   "Catálogo productos": "Produktkatalog",
   "Selecciona un idoma": "Wähle eine Sprache",
   "ERROR InicioSesion": "Der Benutzer und die Gegenpartei sind kein Zufall",
+  "ERROR Creacion usuario": "Die E-Mail existiert bereits",
+  "SUCCESS creacion usuario" : "Benutzer erfolgreich erstellt",
   "Volver atrás": "Geh zurück",
   "Características del Producto": "Produkteigenschaften",
   "Agrega al Carrito": "In den Warenkorb legen",
+<<<<<<< HEAD
   "Ofertas Destacadas": "Hervorgehobene Angebote",
   "Catálogo de productos":"Produktkatalog",
   "Listado de productos":"Produktliste"
+=======
+  "PESCADO_MARISCO": "Fisch und Meeresfrüchte",
+  "LACTEOS": "Milchprodukte",
+  "ACEITES": "Öle",
+  "AGUA_BEBIDAS": "Wasser und Getränke",
+  "LEGUMBRES": "Hülsenfrüchte",
+  "DULCES_POSTRES": "Süßigkeiten und Desserts",
+  "BODEGA": "Weinkeller",
+  "INFUSIONES": "Aufgüsse",
+  "CEREALES": "Getreide",
+  "CHARCUTERIA": "Wurstwaren",
+  "CONGELADOS": "Tiefkühlkost",
+  "CONSERVAS": "Konserven",
+  "HIGIENE": "Hygiene",
+  "FRUTA_VERDURA": "Obst und Gemüse",
+  "CARNE_HUEVOS": "Fleisch und Eier",
+  "PROFILACTICOS": "Verhütungsmittel",
+  "LIMPIEZA_HOGAR": "Haushaltsreinigung",
+  "PANADERIA": "Bäckerei",
+  "Plataforma de pago" : "Zahlungsplattform"
+>>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 }
