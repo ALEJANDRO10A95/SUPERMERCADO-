@@ -33,9 +33,11 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { DesplegableidiomasComponent } from './desplegableidiomas/desplegableidiomas.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
+import { HttpClient, HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CargandoComponent } from './cargando/cargando.component';
+import { LoadingService } from './services/loading.service';
+import { EsferacargandoComponent } from './esferacargando/esferacargando.component';
+import { Figura3Component } from './figura3/figura3.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CarritoCompraComponent,
     DetallesProductoComponent,
     ToggleButtonThemeComponent,
-    DesplegableidiomasComponent
+    DesplegableidiomasComponent,
+    CargandoComponent,
+    EsferacargandoComponent,
+    Figura3Component
   ],
   imports: [
     BrowserModule,
@@ -83,7 +88,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
       }
     })
   ],
-  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
+  providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

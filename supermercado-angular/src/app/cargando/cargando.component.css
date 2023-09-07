@@ -1,0 +1,248 @@
+ /*ESTE ELEMENTO ES EL DE LA PIRÁMIDE
+
+ .pyramid-loader {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(to bottom right, #7f1e58, #7f1e58);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: linear-gradient(to bottom right, #7f1e58, #7f1e58);
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: linear-gradient(to bottom right, #7f1e58, #7f1e58);
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: linear-gradient(to bottom right, #7f1e58, #7f1e58);
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: linear-gradient(to bottom right, #7f1e58, #7f1e58);
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: #7f1e58;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(12px);
+
+}
+
+
+
+/*ESTE ELEMENTO ES EL DE LA ESFERA
+/*
+.loader {
+  display: block;
+  width: 84px;
+  height: 84px;
+  position: relative;
+}
+
+.loader:before , .loader:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #7f1e58;
+  transform: translate(-50% , -100%)  scale(0);
+  animation: push_401 2s infinite linear;
+}
+
+.loader:after {
+  animation-delay: 1s;
+}
+
+@keyframes push_401 {
+  0% , 50% {
+    transform: translate(-50% , 0%)  scale(1)
+  }
+
+  100% {
+    transform: translate(-50%, -100%) scale(0)
+  }
+} */
+
+
+
+
+/*
+.spinner {
+  width: 60.4px;
+  height: 60.4px;
+  --clr: rgb(246,243,245,0.963);
+  --clr-alpha: rgba(76, 3, 58, 0.963);
+  animation: spinner 3s infinite ease;
+  transform-style: preserve-3d;
+}
+
+.spinner > div {
+  background-color: var(--clr-alpha);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border: 3.5px solid var(--clr);
+}
+
+.spinner div:nth-of-type(1) {
+  transform: translateZ(-35.2px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+  transform: rotateY(-270deg) translateX(50%);
+  transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+  transform: rotateY(270deg) translateX(-50%);
+  transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+  transform: rotateX(90deg) translateY(-50%);
+  transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+  transform: rotateX(-90deg) translateY(50%);
+  transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+  transform: translateZ(35.2px);
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+  }
+
+  50% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+  }
+
+  100% {
+    transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+} */
+
+
+.cart-container {
+  perspective: 1000px;
+  margin: 100px auto;
+  width: 100px;
+}
+
+.cart {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cart-spin 3s infinite ease;
+}
+
+.cart-handle,
+.cart-body {
+  background: #7f1e58; /* Color fuksia para el asa y el cuerpo */
+  border-radius: 10px;
+}
+
+.cart-handle {
+  width: 20px;
+  height: 10px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+.cart-body {
+  width: 40px;
+  height: 25px;
+  top: 20px;
+  left: 10px;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+}
+
+.cart-wheels {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+}
+
+.cart-wheel {
+  width: 20px;
+  height: 20px;
+  background: #333; /* Color gris oscuro para las ruedas */
+  border-radius: 50%;
+  margin-right: 10px;
+  display: inline-block;
+  animation: cart-spin-reverse 3s infinite ease;
+}
+
+@keyframes cart-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes cart-spin-reverse {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+

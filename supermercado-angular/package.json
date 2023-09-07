@@ -23,6 +23,7 @@
     "@ngx-translate/http-loader": "^8.0.0",
     "bcryptjs": "^2.4.3",
     "crypto-browserify": "^3.12.0",
+    "font-awesome": "^4.7.0",
     "primeicons": "^6.0.1",
     "primeng": "^16.0.2",
     "rxjs": "~7.8.0",

@@ -5,7 +5,7 @@
   "Búsqueda": "Búsquedad",
   "Carrito de la compra": "Carrito de Compra",
   "Realiza compra": "Realiza Compra",
-  "Precio total compra:": "Precio Total De Compra",
+  "Precio total compra:": "Precio Total De Compra :",
   "Nombre": "Nombre",
   "Apellido": "Apellido",
   "Apellido Es Requerido": "Introduzca Su Apellido",
@@ -41,5 +41,9 @@
   "ERROR InicioSesion": "El usuario y contraseña no coinciden",
   "Volver atrás": "Volver atrás",
   "Características del Producto": "Características del Producto",
-  "Agrega al Carrito": "Agrega Al Carrito"
+  "Agrega al Carrito": "Agrega Al Carrito",
+  "Ofertas Destacadas": "Ofertas Destacadas",
+  "Catálogo de productos":"Catálogo de productos",
+  "Listado de productos":"Listado de productos"
+
 }
