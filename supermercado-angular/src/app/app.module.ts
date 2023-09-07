@@ -38,6 +38,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { CargaComponent } from './carga/carga.component';
 import { PlataformaPagoComponent } from './plataforma-pago/plataforma-pago.component';
 import { DialogPlataformapagoComponent } from './dialog-plataformapago/dialog-plataformapago.component';
+import { CookieService } from 'ngx-cookie-service';
 
 
 
@@ -90,7 +91,7 @@ import { DialogPlataformapagoComponent } from './dialog-plataformapago/dialog-pl
       }
     })
   ],
-  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}],
+  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

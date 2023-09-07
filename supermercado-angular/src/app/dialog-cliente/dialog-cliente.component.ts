@@ -75,7 +75,7 @@ export class DialogClienteComponent {
     let email: string = this.loginForm.get('email')?.value;
     let password: string = this.loginForm.get('password')?.value;
     this.loadingService.show();
-    let loginResponse: Response = await this.loginService.loginCliente(
+    let loginResponse = await this.loginService.loginCliente(
       email,
       password
     );
@@ -118,8 +118,8 @@ export class DialogClienteComponent {
       Swal.fire({
         icon: 'success',
         text: this.translate.instant('SUCCESS creacion usuario'),
-        timer: 2000,
-        timerProgressBar: true,
+        // timer: 2000,
+        // timerProgressBar: true,
         background: '#282f33',
         color: 'rgb(229 229 229)',
       });
@@ -128,8 +128,8 @@ export class DialogClienteComponent {
         icon: 'error',
         title: 'Oops...',
         text: this.translate.instant('ERROR Creacion usuario'),
-        timer: 2000,
-        timerProgressBar: true,
+        // timer: 2000,
+        // timerProgressBar: true,
         background: '#282f33',
         color: 'rgb(229 229 229)',
       });

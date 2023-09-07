@@ -40,12 +40,12 @@ export class LoginpageComponent {
     let email: string = loginForm.get("email")?.value;
     let password: string = loginForm.get("password")?.value;
 
-    
 
-     let loginResponse: Response = await this.authService.loginCliente(email,password);
-    if(!loginResponse.ok) {
-      alert("email o contraseña introducidos son incorrectos");
-      return;
-    } 
+
+     let loginResponse = await this.authService.loginCliente(email,password);
+    // if(!loginResponse) {
+    //   alert("email o contraseña introducidos son incorrectos");
+    //   return;
+    // }
   }
 }
