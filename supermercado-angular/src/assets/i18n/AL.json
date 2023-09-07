@@ -39,6 +39,8 @@
   "Catálogo productos": "Produktkatalog",
   "Selecciona un idoma": "Wähle eine Sprache",
   "ERROR InicioSesion": "Der Benutzer und die Gegenpartei sind kein Zufall",
+  "ERROR Creacion usuario": "Die E-Mail existiert bereits",
+  "SUCCESS creacion usuario" : "Benutzer erfolgreich erstellt",
   "Volver atrás": "Geh zurück",
   "Características del Producto": "Produkteigenschaften",
   "Agrega al Carrito": "In den Warenkorb legen",

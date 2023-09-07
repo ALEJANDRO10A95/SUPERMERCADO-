@@ -101,13 +101,39 @@ export class DialogClienteComponent {
     let apellido: string = this.registerForm.get('apellido')?.value;
     let email: string = this.registerForm.get('email')?.value;
     let password: string = this.registerForm.get('password')?.value;
-
-    let loginResponse: Response = await this.loginService.registroNuevoCliente(
+    let loginResponse;
+    try {
+      let loginResponse: boolean = await this.loginService.registroNuevoCliente(
       nombre,
       apellido,
       email,
       password
     );
+    } catch (error) {
+      console.log(error)
+    }
+
+
+    if(loginResponse === true){
+      Swal.fire({
+        icon: 'success',
+        text: this.translate.instant('SUCCESS creacion usuario'),
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#282f33',
+        color: 'rgb(229 229 229)',
+      });
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: this.translate.instant('ERROR Creacion usuario'),
+        timer: 2000,
+        timerProgressBar: true,
+        background: '#282f33',
+        color: 'rgb(229 229 229)',
+      });
+    }
   }
 
   logoutCliente() {

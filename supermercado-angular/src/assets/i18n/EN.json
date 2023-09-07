@@ -39,6 +39,8 @@
   "Catálogo productos": "Product catalog",
   "Selecciona un idoma": "Select a language",
   "ERROR InicioSesion": "Username and password do not match",
+  "SUCCESS creacion usuario" : "Successfully created user",
+  "ERROR Creacion usuario": "The email already exists",
   "Volver atrás": "Go back",
   "Características del Producto": "Product characteristics",
   "Agrega al Carrito": "Add to Cart",

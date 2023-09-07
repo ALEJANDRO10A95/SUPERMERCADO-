@@ -19,14 +19,14 @@ export class ClienteService {
       headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
     };
 
-    this.http.post(this.url+'/cliente/createCliente', params, options)
-      .subscribe(response => {
-        return response;
-      });
+
+    return this.http.post<{"message" : string, "status" : string, "result" : any, "error" : any}>(this.url + '/auth/register', params, options)
+
   }
 
   async getAllClientes(): Promise<Cliente[]> {
     const data: Response = await fetch(this.url + "/cliente");
+
     return await data.json() ?? [];
   }
 

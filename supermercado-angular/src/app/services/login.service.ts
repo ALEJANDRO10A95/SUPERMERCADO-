@@ -16,14 +16,21 @@ export class LoginService {
   constructor(private clienteService: ClienteService) {
   }
 
-  async registroNuevoCliente(nombre: string, apellido: string, email: string, password: string): Promise<Response> {
-    let passwordCifrada = bcrypt.hashSync(password, 10);
-    console.log("password cifrada:" + passwordCifrada);
+  async registroNuevoCliente(nombre: string, apellido: string, email: string, password: string): Promise<any> {
+    const respuesta = await this.clienteService.registroNuevoCliente(nombre, apellido, email, password);
 
-    await this.clienteService.registroNuevoCliente(nombre, apellido, email, passwordCifrada);
+    respuesta.subscribe(respuesta => {
+      console.log(respuesta);
+      if(respuesta.status === "OK!"){
+        return true;
+      }else{
+        return respuesta.error.message;
+      }
 
-    const resonseOptions = { status: 200 };
-    return new Response(null, resonseOptions);
+    })
+
+
+
   }
 
   async loginCliente(email: string, password: string): Promise<Response> {

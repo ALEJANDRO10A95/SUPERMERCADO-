@@ -39,6 +39,8 @@
   "Catálogo productos": "Catálogo productos",
   "Selecciona un idoma": "Selecciona un idoma",
   "ERROR InicioSesion": "El usuario y contraseña no coinciden",
+  "ERROR Creacion usuario": "El email ya existe",
+  "SUCCESS creacion usuario" : "Usuario creado correctamente",
   "Volver atrás": "Volver atrás",
   "Características del Producto": "Características del Producto",
   "Agrega al Carrito": "Agrega Al Carrito",
@@ -61,4 +63,5 @@
   "LIMPIEZA_HOGAR": "Limpieza Hogar",
   "PANADERIA": "Panaderia",
   "Plataforma de pago" : "Plataforma de pago"
+
 }
