@@ -102,7 +102,7 @@ export class DialogClienteComponent {
     let email: string = this.registerForm.get('email')?.value;
     let password: string = this.registerForm.get('password')?.value;
 
-    let loginResponse: Response = await this.loginService.registroNuevoCliente(
+    let loginResponse : Response = await this.loginService.registroNuevoCliente(
       nombre,
       apellido,
       email,

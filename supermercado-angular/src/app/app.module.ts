@@ -36,6 +36,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { CargaComponent } from './carga/carga.component';
+import { PostProductComponent } from './post-product/post-product.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 
 
@@ -53,7 +55,9 @@ import { CargaComponent } from './carga/carga.component';
     ToggleButtonThemeComponent,
     DesplegableidiomasComponent,
     LoginpageComponent,
-    CargaComponent
+    CargaComponent,
+    PostProductComponent,
+    RegistrarComponent
   ],
   imports: [
     BrowserModule,
