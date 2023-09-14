@@ -45,11 +45,9 @@
   "Volver atrás": "Go back",
   "Características del Producto": "Product characteristics",
   "Agrega al Carrito": "Add to Cart",
-<<<<<<< HEAD
   "Ofertas Destacadas": "Highlighted offers",
   "Catálogo de productos": "Product Catalog",
-  "Listado de productos":"Product Listing"
-=======
+  "Listado de productos":"Product Listing",
   "PESCADO_MARISCO": "Fish and Seafood",
   "LACTEOS": "Dairy",
   "ACEITES": "Oils",
@@ -69,5 +67,4 @@
   "LIMPIEZA_HOGAR": "Household Cleaning",
   "PANADERIA": "Bakery",
   "Plataforma de pago": "Payment Platform"
->>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 }

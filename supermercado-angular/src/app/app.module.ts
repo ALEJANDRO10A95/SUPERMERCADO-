@@ -33,22 +33,19 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { DesplegableidiomasComponent } from './desplegableidiomas/desplegableidiomas.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-<<<<<<< HEAD
 import { HttpClient, HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CargandoComponent } from './cargando/cargando.component';
 import { LoadingService } from './services/loading.service';
 import { EsferacargandoComponent } from './esferacargando/esferacargando.component';
 import { Figura3Component } from './figura3/figura3.component';
-=======
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { CargaComponent } from './carga/carga.component';
 import { PlataformaPagoComponent } from './plataforma-pago/plataforma-pago.component';
 import { DialogPlataformapagoComponent } from './dialog-plataformapago/dialog-plataformapago.component';
 import { CookieService } from 'ngx-cookie-service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
->>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 
 @NgModule({
   declarations: [
@@ -63,16 +60,14 @@ import { CookieService } from 'ngx-cookie-service';
     DetallesProductoComponent,
     ToggleButtonThemeComponent,
     DesplegableidiomasComponent,
-<<<<<<< HEAD
     CargandoComponent,
     EsferacargandoComponent,
-    Figura3Component
-=======
+    Figura3Component,
     LoginpageComponent,
     CargaComponent,
     PlataformaPagoComponent,
-    DialogPlataformapagoComponent
->>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
+    DialogPlataformapagoComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -105,11 +100,7 @@ import { CookieService } from 'ngx-cookie-service';
       }
     })
   ],
-<<<<<<< HEAD
-  providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
-=======
   providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'}, CookieService],
->>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
   bootstrap: [AppComponent]
 })
 export class AppModule { }

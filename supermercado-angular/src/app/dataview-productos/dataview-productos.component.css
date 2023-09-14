@@ -11,7 +11,7 @@
 
 .text-color{
 
-  color: #f5f3f4 !important; /* Cambia el color al que deseamos */
+  color: var(--text-color) !important; /* Cambia el color al que deseamos */
   font-family: 'Roboto', sans-serif;
 
 }
