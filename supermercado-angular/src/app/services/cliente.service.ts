@@ -65,22 +65,19 @@ export class ClienteService {
     };
 
     const response:
-      | Observable<{
+       Observable<{
           message: string;
           status: string;
           result: any;
           error: any;
         }>
-      | any = await this.http
-      .post<{
-        message: string;
-        status: string;
-        result: any;
-        error: any;
-      }>(this.url + '/auth/login', params, options)
-      .pipe(
-        mergeMap((v) => v == null ? throwError('v is null') : of(v)
-      ));
+        = await this.http
+        .post<{
+          message: string;
+          status: string;
+          result: any;
+          error: any;
+        }>(this.url + '/auth/login', params, options)
 
     return response;
 

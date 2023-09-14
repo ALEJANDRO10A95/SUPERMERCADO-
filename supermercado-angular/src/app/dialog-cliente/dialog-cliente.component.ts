@@ -6,6 +6,10 @@ import { MenuItem, MessageService } from 'primeng/api';
 import Swal from 'sweetalert2';
 import { TranslateService } from '@ngx-translate/core';
 import { LoadingService } from '../services/loader.service';
+import { CookieService } from 'ngx-cookie-service';
+import jwt_decode from 'jwt-decode';
+
+
 
 @Component({
   selector: 'app-dialog-cliente',
@@ -13,7 +17,8 @@ import { LoadingService } from '../services/loader.service';
   styleUrls: ['./dialog-cliente.component.css'],
 })
 export class DialogClienteComponent {
-  clienteIngresado?: Cliente;
+  clienteIngresado: Cliente | undefined;
+
   esDialogVisible: boolean = false;
 
   displayDialog: boolean = false;
@@ -41,46 +46,95 @@ export class DialogClienteComponent {
   constructor(
     private translate: TranslateService,
     private loginService: LoginService,
-    public loadingService: LoadingService
+    public loadingService: LoadingService,
+    private cookies : CookieService
   ) {}
+
   iniciarSesionTraducido: string = this.translate.instant('Iniciar sesión');
   crearCuentaTraducido: string = this.translate.instant('Crear cuenta');
 
   ngOnInit(): void {
-    this.loginService.clienteSubject$.subscribe((cliente) => {
-      this.clienteIngresado = cliente;
-    });
 
-    this.items = [
-      {
-        items: [
-          {
-            label: 'Iniciar sesión',
-            command: (event: any) => {
-              this.showDialog();
+    if(this.cookies.get("token")){
+      let decode : any = jwt_decode(this.cookies.get("token"));
+      this.clienteIngresado! = {nombre : decode.nombre, email : decode.email};
+      this.items = [
+        {
+          items: [
+            {
+              label: 'Cerrar Sesión',
+              command: (event: any) => {
+                this.logoutCliente();
+              },
+            }
+          ],
+        },
+      ];
+    }else{
+      this.loginService.clienteSubject$.subscribe((cliente) => {
+        this.clienteIngresado = cliente;
+      });
+
+      this.items = [
+        {
+          items: [
+            {
+              label: 'Iniciar sesión',
+              command: (event: any) => {
+                this.showDialog();
+              },
             },
-          },
-          {
-            label: 'Crear cuenta',
-            command: (event: any) => {
-              this.showCreateAccountDialog();
+            {
+              label: 'Crear cuenta',
+              command: (event: any) => {
+                this.showCreateAccountDialog();
+              },
             },
-          },
-        ],
-      },
-    ];
+          ],
+        },
+      ];
+    }
+
   }
 
   async loginCliente() {
     let email: string = this.loginForm.get('email')?.value;
     let password: string = this.loginForm.get('password')?.value;
     this.loadingService.show();
-    let loginResponse = await this.loginService.loginCliente(
+
+    try{
+    let loginResponse : Response = await this.loginService.loginCliente(
       email,
       password
     );
-    this.loadingService.hide();
-    if (!loginResponse.ok) {
+      console.log(loginResponse)
+      this.loadingService.hide();
+      if (loginResponse.status === 200) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: this.translate.instant('ERROR InicioSesion'),
+          timer: 2000,
+          timerProgressBar: true,
+          background: '#282f33',
+          color: 'rgb(229 229 229)',
+        });
+      }else{
+        this.displayDialog = false;
+        Swal.fire({
+          icon: 'success',
+          title: 'Nice',
+          text: this.translate.instant('SUCCESS inicio sesion'),
+          timer: 2000,
+          timerProgressBar: true,
+          background: '#282f33',
+          color: 'rgb(229 229 229)',
+        });
+        this.ngOnInit();
+      }
+
+    } catch (error) {
+      this.loadingService.hide();
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -90,10 +144,10 @@ export class DialogClienteComponent {
         background: '#282f33',
         color: 'rgb(229 229 229)',
       });
-
-      return;
+      console.log(error);
     }
-    this.esDialogVisible = false;
+
+    return;
   }
 
   async registraCliente() {

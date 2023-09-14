@@ -41,6 +41,7 @@
   "ERROR InicioSesion": "Nom d'utilisateur et mot de passe ne correspondent pas",
   "ERROR Creacion usuario": "L'email existe déjà",
   "SUCCESS creacion usuario" : "Utilisateur créé avec succès",
+  "SUCCESS inicio sesion" : "Connexion réussie",
   "Volver atrás": "Retourner en arrière",
   "Características del Producto": "Caractéristiques du produit",
   "Agrega al Carrito": "Ajouter au panier",

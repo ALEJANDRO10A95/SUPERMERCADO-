@@ -41,6 +41,7 @@
   "ERROR InicioSesion": "Username and password do not match",
   "SUCCESS creacion usuario" : "Successfully created user",
   "ERROR Creacion usuario": "The email already exists",
+  "SUCCESS inicio sesion" : "Login successful",
   "Volver atrás": "Go back",
   "Características del Producto": "Product characteristics",
   "Agrega al Carrito": "Add to Cart",

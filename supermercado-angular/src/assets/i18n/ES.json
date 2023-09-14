@@ -41,6 +41,7 @@
   "ERROR InicioSesion": "El usuario y contraseña no coinciden",
   "ERROR Creacion usuario": "El email ya existe",
   "SUCCESS creacion usuario" : "Usuario creado correctamente",
+  "SUCCESS inicio sesion" : "Inicio de sesión satisfactorio",
   "Volver atrás": "Volver atrás",
   "Características del Producto": "Características del Producto",
   "Agrega al Carrito": "Agrega Al Carrito",
