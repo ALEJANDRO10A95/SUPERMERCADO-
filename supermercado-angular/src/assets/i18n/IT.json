@@ -44,6 +44,11 @@
   "Volver atrás": "Utente creato con successo",
   "Características del Producto": "Caratteristiche del prodotto",
   "Agrega al Carrito": "Aggiungi al carrello",
+<<<<<<< HEAD
+  "Ofertas Destacadas": "Offerte in evidenza",
+  "Catálogo de productos":"Catalogo dei prodotti",
+  "Listado de productos":"Elenco dei prodotti"
+=======
   "PESCADO_MARISCO": "Pesce e Frutti di mare",
   "LACTEOS": "Latticini",
   "ACEITES": "Oli",
@@ -63,4 +68,5 @@
   "LIMPIEZA_HOGAR": "Pulizia della casa",
   "PANADERIA": "Panetteria",
   "Plataforma de pago": "Piattaforma di pagamento"
+>>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 }

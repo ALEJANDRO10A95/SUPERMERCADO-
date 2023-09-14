@@ -5,7 +5,7 @@
   "Búsqueda": "Búsquedad",
   "Carrito de la compra": "Carrito de Compra",
   "Realiza compra": "Realiza Compra",
-  "Precio total compra:": "Precio Total De Compra",
+  "Precio total compra:": "Precio Total De Compra :",
   "Nombre": "Nombre",
   "Apellido": "Apellido",
   "Apellido Es Requerido": "Introduzca Su Apellido",
@@ -45,6 +45,11 @@
   "Volver atrás": "Volver atrás",
   "Características del Producto": "Características del Producto",
   "Agrega al Carrito": "Agrega Al Carrito",
+<<<<<<< HEAD
+  "Ofertas Destacadas": "Ofertas Destacadas",
+  "Catálogo de productos":"Catálogo de productos",
+  "Listado de productos":"Listado de productos"
+=======
   "PESCADO_MARISCO" : "Pescado Marisco",
   "LACTEOS" : "Lacteos",
   "ACEITES": "Aceites",
@@ -64,5 +69,6 @@
   "LIMPIEZA_HOGAR": "Limpieza Hogar",
   "PANADERIA": "Panaderia",
   "Plataforma de pago" : "Plataforma de pago"
+>>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 
 }

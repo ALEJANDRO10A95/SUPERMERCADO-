@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
 import { LoadingService } from './services/loader.service';
 
@@ -9,12 +9,18 @@ import { LoadingService } from './services/loader.service';
 
 })
 
-export class AppComponent {
+export class AppComponent{
   title = 'Supermercado Angular';
+  //  loadingService: any;
 
   constructor(private translate: TranslateService, public loadingService: LoadingService) {
     this.translate.addLangs(["AL","EN","ES","FR","IT"]);
     this.translate.setDefaultLang('ES');
     this.translate.use('ES');
+  }
+
+  mostrarCargaYAbrirDialogCarrito(){
+
+    
   }
 }

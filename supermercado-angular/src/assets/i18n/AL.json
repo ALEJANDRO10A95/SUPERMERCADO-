@@ -45,6 +45,11 @@
   "Volver atrás": "Geh zurück",
   "Características del Producto": "Produkteigenschaften",
   "Agrega al Carrito": "In den Warenkorb legen",
+<<<<<<< HEAD
+  "Ofertas Destacadas": "Hervorgehobene Angebote",
+  "Catálogo de productos":"Produktkatalog",
+  "Listado de productos":"Produktliste"
+=======
   "PESCADO_MARISCO": "Fisch und Meeresfrüchte",
   "LACTEOS": "Milchprodukte",
   "ACEITES": "Öle",
@@ -64,4 +69,5 @@
   "LIMPIEZA_HOGAR": "Haushaltsreinigung",
   "PANADERIA": "Bäckerei",
   "Plataforma de pago" : "Zahlungsplattform"
+>>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 }

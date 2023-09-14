@@ -45,6 +45,11 @@
   "Volver atrás": "Retourner en arrière",
   "Características del Producto": "Caractéristiques du produit",
   "Agrega al Carrito": "Ajouter au panier",
+<<<<<<< HEAD
+  "Ofertas Destacadas": "Offres mises en avant",
+  "Catálogo de productos":"Catalogue de produits",
+  "Listado de productos":"Liste des produits"
+=======
   "PESCADO_MARISCO": "Poisson et Fruits de mer",
   "LACTEOS": "Produits laitiers",
   "ACEITES": "Huiles",
@@ -64,4 +69,5 @@
   "LIMPIEZA_HOGAR": "Entretien ménager",
   "PANADERIA": "Boulangerie",
   "Plataforma de pago": "Plateforme de paiement"
+>>>>>>> a56967010dd853f9182eea0fc49a1a7171402ea8
 }
